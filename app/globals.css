@@ -34,7 +34,7 @@
   }
 
   :is(h1, h2, h3, h4, h5, h6) {
-    @apply font-heading font-medium leading-snug text-black;
+    @apply font-heading font-bold leading-snug text-black;
   }
 
   button {
@@ -65,5 +65,96 @@
 @layer utilities {
   .container {
     @apply w-full mx-auto max-w-full px-4 sm:px-5 md:px-6 lg:px-10 md:max-w-180 lg:max-w-245 xl:max-w-7xl 2xl:max-w-360;
+  }
+
+  .portfolio-volume {
+    --volume-x: 0px;
+    --volume-y: 0px;
+    --volume-rotate: 0deg;
+    --volume-scale: 1;
+    z-index: 20;
+    color: var(--cover-ink);
+    background: var(--cover);
+    transform: translate3d(calc(-50% + var(--volume-x)), calc(-50% + var(--volume-y)), 0)
+      rotate(var(--volume-rotate)) scale(var(--volume-scale));
+    transition:
+      transform 700ms cubic-bezier(.22, 1, .36, 1),
+      filter 500ms ease,
+      opacity 500ms ease;
+    will-change: transform;
+  }
+
+  .portfolio-volume[data-offset="-2"] {
+    --volume-x: -142px;
+    --volume-y: 38px;
+    --volume-rotate: -9deg;
+    --volume-scale: .82;
+    z-index: 8;
+    filter: saturate(.72);
+    opacity: .78;
+  }
+
+  .portfolio-volume[data-offset="-1"] {
+    --volume-x: -84px;
+    --volume-y: 20px;
+    --volume-rotate: -5deg;
+    --volume-scale: .91;
+    z-index: 14;
+    filter: saturate(.88);
+  }
+
+  .portfolio-volume[data-offset="1"] {
+    --volume-x: 84px;
+    --volume-y: 20px;
+    --volume-rotate: 5deg;
+    --volume-scale: .91;
+    z-index: 14;
+    filter: saturate(.88);
+  }
+
+  .portfolio-volume[data-offset="2"] {
+    --volume-x: 142px;
+    --volume-y: 38px;
+    --volume-rotate: 9deg;
+    --volume-scale: .82;
+    z-index: 8;
+    filter: saturate(.72);
+    opacity: .78;
+  }
+
+  .portfolio-volume[data-active="true"] {
+    --volume-y: -24px;
+    --volume-scale: 1.04;
+    z-index: 30;
+    filter: saturate(1);
+    opacity: 1;
+  }
+
+  @media (min-width: 640px) {
+    .portfolio-volume[data-offset="-2"] {
+      --volume-x: -236px;
+    }
+
+    .portfolio-volume[data-offset="-1"] {
+      --volume-x: -132px;
+    }
+
+    .portfolio-volume[data-offset="1"] {
+      --volume-x: 132px;
+    }
+
+    .portfolio-volume[data-offset="2"] {
+      --volume-x: 236px;
+    }
+
+    .portfolio-volume[data-active="true"] {
+      --volume-y: -32px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portfolio-volume {
+      transition: none;
+    }
   }
 }
