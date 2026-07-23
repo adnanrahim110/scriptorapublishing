@@ -46,7 +46,7 @@ const PublishingLedger = () => {
             {homeLedger.entries.map((entry, index) => (
               <li
                 key={entry.index}
-                className="group/ledger relative min-h-52 border-b border-neutral-300 p-5 last:border-b-0 sm:p-6 sm:[&:nth-child(odd)]:border-r sm:[&:nth-child(3)]:border-b-0 lg:min-h-48 lg:p-7"
+                className="group/ledger relative min-h-52 border-b border-neutral-300 p-5 last:border-b-0 sm:p-6 sm:odd:border-r sm:nth-3:border-b-0 lg:min-h-48 lg:p-7"
               >
                 <div className="flex items-start justify-between gap-6">
                   <span className="font-mono text-[9px] tracking-[0.16em] text-primary-600">

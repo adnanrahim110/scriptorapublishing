@@ -26,7 +26,7 @@ const SectionHeading = ({
         className,
       )}
     >
-      <div className="flex items-start gap-3 lg:col-span-3">
+      <div className="flex items-start gap-3 lg:col-span-2">
         <span
           aria-hidden="true"
           className={cn(
@@ -54,7 +54,7 @@ const SectionHeading = ({
         </div>
       </div>
 
-      <div className="lg:col-span-9 lg:grid lg:grid-cols-9 lg:gap-8">
+      <div className="lg:col-span-10 lg:grid lg:grid-cols-10 lg:gap-8">
         <Title
           as="h2"
           size="display"
@@ -64,7 +64,7 @@ const SectionHeading = ({
           leading="tight"
           className={cn(
             "max-w-3xl text-[clamp(2.15rem,4.8vw,4.75rem)]",
-            description ? "lg:col-span-6" : "lg:col-span-9",
+            description ? "lg:col-span-6" : "lg:col-span-10",
           )}
         >
           {title}
@@ -72,7 +72,7 @@ const SectionHeading = ({
         {description && (
           <p
             className={cn(
-              "mt-5 max-w-xl text-sm leading-6 sm:text-base sm:leading-7 lg:col-span-3 lg:mt-1",
+              "mt-5 max-w-xl text-sm leading-6 sm:text-base sm:leading-7 lg:col-span-4 lg:mt-1",
               inverted ? "text-white/65" : "text-neutral-600",
             )}
           >

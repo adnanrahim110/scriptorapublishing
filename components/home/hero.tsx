@@ -20,10 +20,6 @@ const Hero = () => {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20 bg-[linear-gradient(to_right,rgba(119,77,43,.07)_1px,transparent_1px)] bg-size-[32px_100%] opacity-35"
       />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 right-0 top-0 -z-10 w-1 bg-primary-700/70"
-      />
 
       <div className="container">
         <div className="relative grid gap-12 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-8">

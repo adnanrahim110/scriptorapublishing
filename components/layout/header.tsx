@@ -291,7 +291,7 @@ const Header = () => {
             "pointer-events-auto relative grid w-full grid-cols-[1fr_auto] items-center transition-[height,background-color,border-color,box-shadow] duration-400 xl:grid-cols-[1fr_auto_1fr]",
             isAtTop && !mobileMenuOpen
               ? "h-20 border-b border-primary-900/15 bg-transparent"
-              : "h-16 rounded-sm border border-neutral-200 bg-[#fcfaf7] shadow-[0_2px_6px_rgba(23,23,23,.09)]",
+              : "px-4 h-16 rounded-sm border border-neutral-200 bg-[#fcfaf7] shadow-[0_2px_6px_rgba(23,23,23,.09)]",
           )}
         >
           <Link
