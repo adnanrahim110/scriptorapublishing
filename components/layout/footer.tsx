@@ -1,6 +1,7 @@
 import Button from "@/components/ui/button";
 import Title from "@/components/ui/title";
 import { brand, contactDetails, navigationLink } from "@/content/global";
+import { legalLinks } from "@/content/legal";
 import { cn } from "@/utils/cn";
 import { ArrowUp, Mail, Phone } from "lucide-react";
 import Image from "next/image";
@@ -264,7 +265,21 @@ const Footer = () => {
           <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/35">
             © {currentYear} {brand.name}. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <nav
+              aria-label="Legal navigation"
+              className="flex flex-wrap items-center gap-x-5 gap-y-2"
+            >
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="border-b border-transparent text-[10px] font-semibold text-white/50 transition-colors duration-200 hover:border-primary-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300/70"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
             <Button
               href="/#home-hero-title"
               variant="outline"
