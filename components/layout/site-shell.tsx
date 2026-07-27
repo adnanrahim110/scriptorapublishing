@@ -1,5 +1,5 @@
 import { Lenis } from "lenis/react";
-import Footer from "./footer";
+import FooterRouter from "./footer-router";
 import Header from "./header";
 
 const SiteShell = ({ children }: { children: React.ReactNode }) => {
@@ -8,7 +8,7 @@ const SiteShell = ({ children }: { children: React.ReactNode }) => {
       <Lenis root options={{ allowNestedScroll: true }} />
       <Header />
       {children}
-      <Footer />
+      <FooterRouter />
     </>
   );
 };
