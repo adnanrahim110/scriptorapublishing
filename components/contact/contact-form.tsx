@@ -6,8 +6,10 @@ import Select from "@/components/ui/select";
 import Textarea from "@/components/ui/textarea";
 import { contactDetails } from "@/content/global";
 import { homeContactServices } from "@/content/home";
+import { submitForm } from "@/libs/formSubmit";
 import { cn } from "@/utils/cn";
 import { MessageSquareText } from "lucide-react";
+import { useRouter } from "next/navigation";
 import {
   useState,
   type ChangeEvent,
@@ -32,6 +34,7 @@ type ContactFormProps = {
   description?: string;
   submitLabel?: string;
   className?: string;
+  formName?: string;
 };
 
 const initialValues: FormValues = {
@@ -115,18 +118,28 @@ function ContactField({
 export default function ContactForm({
   idPrefix,
   eyebrow = "Manuscript inquiry form",
-  description = "Required fields are checked inline before the inquiry is prepared.",
-  submitLabel = "Prepare inquiry",
+  description = "Required fields are checked inline before your inquiry is securely sent.",
+  submitLabel = "Send inquiry",
   className,
+  formName,
 }: ContactFormProps) {
+  const router = useRouter();
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<
     Partial<Record<FieldName, boolean>>
   >({});
-  const [status, setStatus] = useState<"idle" | "ready">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [submissionError, setSubmissionError] = useState("");
   const emailContact = contactDetails.find((detail) => detail.label === "Email");
   const contactEmail = emailContact?.value ?? "info@scriptorapublishing.com";
+  const resolvedFormName =
+    formName ??
+    (idPrefix === "home-contact"
+      ? "Homepage Contact Form"
+      : "Contact Page Form");
 
   const fieldId = (field: FieldName) => `${idPrefix}-${field}`;
 
@@ -134,6 +147,7 @@ export default function ContactForm({
     const nextValues = { ...values, [field]: value };
     setValues(nextValues);
     setStatus("idle");
+    setSubmissionError("");
     if (touched[field]) setErrors(validate(nextValues));
   };
 
@@ -148,7 +162,7 @@ export default function ContactForm({
     setErrors(validate(values));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const nextErrors = validate(values);
     setErrors(nextErrors);
@@ -162,15 +176,39 @@ export default function ContactForm({
 
     if (Object.keys(nextErrors).length > 0) return;
 
-    const subject = encodeURIComponent(
-      `Scriptora project inquiry — ${values.service}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nService: ${values.service}\n\nProject notes:\n${values.message}`,
-    );
+    setStatus("submitting");
+    setSubmissionError("");
 
-    setStatus("ready");
-    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    const result = await submitForm({
+      formData: event.currentTarget,
+      requiredFields: ["name", "email", "phone", "service", "message"],
+      extraFields: {
+        formName: resolvedFormName,
+        form_source: resolvedFormName,
+      },
+    });
+
+    if (!result.success) {
+      if (result.validationErrors) {
+        const serverErrors: FormErrors = {};
+        (Object.keys(initialValues) as FieldName[]).forEach((field) => {
+          if (result.validationErrors[field]) {
+            serverErrors[field] = result.validationErrors[field];
+          }
+        });
+        setErrors((current) => ({ ...current, ...serverErrors }));
+      }
+
+      setSubmissionError(
+        result.error ||
+          "We could not send your inquiry. Please try again or email the studio directly.",
+      );
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
+    router.push("/thankyou");
   };
 
   return (
@@ -195,8 +233,22 @@ export default function ContactForm({
         id={`${idPrefix}-form`}
         noValidate
         onSubmit={handleSubmit}
-        className="mt-8"
+        className="relative mt-8"
       >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-[9999px] h-px w-px overflow-hidden"
+        >
+          <label htmlFor={`${idPrefix}-website`}>Website</label>
+          <input
+            id={`${idPrefix}-website`}
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div className="grid gap-x-5 md:grid-cols-2">
           <ContactField
             id={fieldId("name")}
@@ -302,10 +354,16 @@ export default function ContactForm({
 
         <div className="mt-8 flex flex-col gap-4 border-t border-neutral-300 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-md text-[11px] leading-5 text-neutral-500">
-            Submitting opens your email application with these project details
-            prepared for {contactEmail}.
+            Your project details are sent securely to {contactEmail}. We use
+            them only to review and respond to your inquiry.
           </p>
-          <Button type="submit" size="lg" className="sm:min-w-48">
+          <Button
+            type="submit"
+            size="lg"
+            loading={status === "submitting"}
+            disabled={status === "success"}
+            className="sm:min-w-48"
+          >
             {submitLabel}
           </Button>
         </div>
@@ -315,13 +373,16 @@ export default function ContactForm({
           aria-live="polite"
           className={cn(
             "mt-5 border-l-2 px-4 py-3 text-sm",
-            status === "ready"
+            status === "success"
               ? "border-emerald-600 bg-emerald-50 text-emerald-800"
-              : "hidden",
+              : status === "error"
+                ? "border-rose-600 bg-rose-50 text-rose-800"
+                : "hidden",
           )}
         >
-          Your email application should now be open with the inquiry prepared.
-          Review it, then send when ready.
+          {status === "success"
+            ? "Your inquiry has been sent. Taking you to the confirmation page..."
+            : submissionError}
         </p>
       </form>
     </div>

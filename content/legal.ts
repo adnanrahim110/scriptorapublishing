@@ -42,7 +42,7 @@ export const legalDocuments = {
         title: "Information we receive",
         paragraphs: [
           "We receive information you choose to provide when you contact us, request information, discuss a publishing project, or correspond with the studio.",
-          "The public contact form currently prepares an email in your own email application. The information is not sent to Scriptora until you review and send that email.",
+          "When you submit the public contact form, the information is sent to Scriptora by email so the studio can review and respond to your enquiry.",
         ],
         bullets: [
           "Your name, email address, and telephone number.",
@@ -50,7 +50,7 @@ export const legalDocuments = {
           "Your message, project description, manuscript stage, and stated goals.",
           "Files or other materials you later choose to send through direct correspondence.",
           "Records of our communications and any preferences you communicate.",
-          "Limited technical information that hosting, security, or network providers may process when serving the website, such as an IP address, browser type, device details, request time, and requested page.",
+          "Limited technical and attribution information, such as an IP address, approximate location, browser details, referrer, landing page, conversion page, campaign parameters, and advertising click identifiers when present in the page URL.",
         ],
       },
       {
@@ -96,7 +96,8 @@ export const legalDocuments = {
         id: "cookies-and-technical-data",
         title: "Cookies and technical data",
         paragraphs: [
-          "At the effective date shown above, this public website does not intentionally use advertising pixels or analytics cookies. Essential hosting, network, or security infrastructure may still process technical request information or use strictly necessary technologies to deliver and protect the site.",
+          "The website uses first-party browser storage to retain initial and recent visit attribution for up to 90 days. This may include referrer, landing and conversion pages, UTM campaign parameters, channel classification, and advertising click identifiers supplied in the page URL.",
+          "This attribution is attached to a contact-form submission so Scriptora can understand which website journey or campaign produced the enquiry. The website may also prepare a lead-submission event for an installed analytics or tag-management service.",
           "If analytics, advertising, personalisation, or other non-essential cookie features are introduced, this notice and any required consent controls should be updated before those features are used.",
         ],
       },

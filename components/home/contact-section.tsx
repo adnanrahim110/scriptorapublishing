@@ -24,7 +24,7 @@ const ContactSection = () => {
             index="10"
             eyebrow="The manuscript desk"
             title="Bring us the draft. Tell us what it could become."
-            description="Share the current shape of the project and the kind of help you need. The form validates each field before preparing your inquiry."
+            description="Share the current shape of the project and the kind of help you need. The form validates each field before securely sending your inquiry."
             inverted
           />
         </div>

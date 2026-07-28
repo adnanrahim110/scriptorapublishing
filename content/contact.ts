@@ -63,5 +63,5 @@ export const contactBrief = {
   ],
   formEyebrow: "Manuscript inquiry form",
   formDescription:
-    "Required fields are checked inline before your inquiry is prepared.",
+    "Required fields are checked inline before your inquiry is securely sent.",
 } as const;

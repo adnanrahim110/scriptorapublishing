@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact form email
+
+Both website contact forms submit to `api/sendEmail.php`. Copy `.env.example`
+to `.env`, provide the SMTP credentials, and keep
+`MAIL_TO=info@scriptorapublishing.com` unless the lead inbox changes.
+
+The endpoint requires PHP 8+ and the Composer dependencies declared in
+`api/composer.json`:
+
+```bash
+composer install --working-dir=api
+```
+
+In development, `NEXT_PUBLIC_ENDPOINT_URL` must point to a PHP-capable web
+server. In production, the endpoint is expected at
+`https://scriptorapublishing.com/api/sendEmail.php`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
