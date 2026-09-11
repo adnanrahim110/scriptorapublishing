@@ -8,6 +8,10 @@ import PortfolioSlider from "@/components/home/portfolio-slider";
 import PublishingLedger from "@/components/home/publishing-ledger";
 import PublishingProcess from "@/components/home/publishing-process";
 import ServicesAnatomy from "@/components/home/services-anatomy";
+import { homeSeo } from "@/content/home";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = homeSeo;
 
 export default function Home() {
   return (

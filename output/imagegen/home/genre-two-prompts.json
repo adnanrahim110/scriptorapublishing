@@ -1,0 +1,23 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "filename": "genre-children.png",
+      "sourcePath": "C:/Users/hp/.codex/generated_images/01a090b2-f26e-7481-80aa-f4c50c259ea9/exec-5466c9c2-76da-4429-b764-3e7b03e876fb.png",
+      "prompt": "Use case: illustration-story. Asset type: homepage genre shelf, original cover art only. Create a portrait 2:3 full-bleed beautifully detailed painterly editorial illustration of a small child holding a glowing lantern and walking alongside a friendly fox beneath a large tree filled with tiny warm lights. Picture-book storytelling, gentle curiosity, expressive charming characters, original watercolor and gouache, paper textures, warm cream, ochre and earthy brown, joyful warm color with restrained sage and navy shadows. Strong readable composition at thumbnail scale, elegant fine art finish. This is flat art, not a book mockup. No text, letters, names, titles, typography, branding, watermarks or borders.",
+      "qa": "Visually inspected; portrait 2:3, child with lantern and fox under glowing tree; original art without text."
+    },
+    {
+      "filename": "genre-poetry.png",
+      "sourcePath": "C:/Users/hp/.codex/generated_images/01a090b2-f26e-7481-80aa-f4c50c259ea9/exec-4ad1b42e-b2cb-4888-98b3-21e1d54935e9.png",
+      "prompt": "Use case: stylized-concept. Asset type: homepage poetry genre shelf, original cover art only. Create a portrait 2:3 full-bleed lyrical painterly landscape. A solitary reed stands beside still water reflecting the golden light of a low morning moon, the water and far shore softly layered with delicate paper-like texture. Contemplative cream, ochre, earthy brown and dusky blue, very restrained sage. Elegant subtle composition with atmosphere and generous breathing room, artful handmade gouache and watercolor finish. Clear memorable silhouette and readable at thumbnail scale. This is flat art, not a book mockup. No text, letters, names, titles, typography, branding, watermarks or borders.",
+      "qa": "Visually inspected; portrait 2:3, reed and moon over water; original art without text."
+    },
+    {
+      "filename": "genre-professional.png",
+      "sourcePath": "C:/Users/hp/.codex/generated_images/01a090b2-f26e-7481-80aa-f4c50c259ea9/exec-cb8e3982-a997-4872-9991-a6c31dd4fbef.png",
+      "prompt": "Use case: stylized-concept. Asset type: homepage professional and technical books genre shelf, original cover art only. Create a portrait 2:3 full-bleed sophisticated editorial still life illustration of a carefully laid-out open workbook, a ruler, pencil, and orderly folded plans on a warm studio desk. Thoughtful precise linework suggesting technical diagrams through a few geometric circles, straight guide lines and clean measured shapes only, with no labels, numbers, fake data or readable marks. Visual precision and specialist knowledge. Painterly gouache and watercolor with refined paper textures, warm cream, ochre, earthy brown, restrained sage and navy. Balanced artful top-down composition that reads well at small thumbnail size, elegant craft. Flat cover art only, not a book cover mockup or 3D book. No text, letters, names, titles, typography, branding, watermarks or borders.",
+      "qa": "Visually inspected; portrait 2:3, precise geometric workbook and tools; original art without labels."
+    }
+  ]
+}

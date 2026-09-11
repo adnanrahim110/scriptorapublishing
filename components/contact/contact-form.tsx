@@ -4,8 +4,7 @@ import Button from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import Select from "@/components/ui/select";
 import Textarea from "@/components/ui/textarea";
-import { contactDetails } from "@/content/global";
-import { homeContactServices } from "@/content/home";
+import { contactServices } from "@/content/contact";
 import { submitForm } from "@/libs/formSubmit";
 import { cn } from "@/utils/cn";
 import { MessageSquareText } from "lucide-react";
@@ -35,6 +34,7 @@ type ContactFormProps = {
   submitLabel?: string;
   className?: string;
   formName?: string;
+  services?: readonly string[];
 };
 
 const initialValues: FormValues = {
@@ -44,11 +44,6 @@ const initialValues: FormValues = {
   service: "",
   message: "",
 };
-
-const serviceOptions = homeContactServices.map((service) => ({
-  value: service,
-  label: service,
-}));
 
 function validate(values: FormValues): FormErrors {
   const errors: FormErrors = {};
@@ -109,7 +104,7 @@ function ContactField({
           error ? "text-rose-700" : "text-transparent",
         )}
       >
-        {error ?? "No error"}
+        {error ?? ""}
       </p>
     </div>
   );
@@ -122,19 +117,22 @@ export default function ContactForm({
   submitLabel = "Send inquiry",
   className,
   formName,
+  services = contactServices,
 }: ContactFormProps) {
+  const serviceOptions = services.map((service) => ({
+    value: service,
+    label: service,
+  }));
   const router = useRouter();
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
-  const [touched, setTouched] = useState<
-    Partial<Record<FieldName, boolean>>
-  >({});
+  const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>(
+    {},
+  );
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [submissionError, setSubmissionError] = useState("");
-  const emailContact = contactDetails.find((detail) => detail.label === "Email");
-  const contactEmail = emailContact?.value ?? "info@scriptorapublishing.com";
   const resolvedFormName =
     formName ??
     (idPrefix === "home-contact"
@@ -215,9 +213,11 @@ export default function ContactForm({
     <div className={cn("bg-[#fcfaf7] text-neutral-900", className)}>
       <div className="flex items-start justify-between gap-6 border-b border-neutral-300 pb-5">
         <div>
-          <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-primary-700">
-            {eyebrow}
-          </p>
+          {eyebrow && (
+            <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-primary-700">
+              {eyebrow}
+            </p>
+          )}
           <p className="mt-2 max-w-lg text-xs leading-5 text-neutral-500">
             {description}
           </p>
@@ -283,7 +283,7 @@ export default function ContactForm({
               onBlur={() => markTouched("email")}
               invalid={Boolean(touched.email && errors.email)}
               aria-describedby={`${fieldId("email")}-error`}
-              placeholder="you@example.com"
+              placeholder="Your email address"
             />
           </ContactField>
 
@@ -303,7 +303,7 @@ export default function ContactForm({
               onBlur={() => markTouched("phone")}
               invalid={Boolean(touched.phone && errors.phone)}
               aria-describedby={`${fieldId("phone")}-error`}
-              placeholder="+1 555 000 0000"
+              placeholder="Your phone number"
             />
           </ContactField>
 
@@ -354,8 +354,7 @@ export default function ContactForm({
 
         <div className="mt-8 flex flex-col gap-4 border-t border-neutral-300 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-md text-[11px] leading-5 text-neutral-500">
-            Your project details are sent securely to {contactEmail}. We use
-            them only to review and respond to your inquiry.
+            We use your project details to review and respond to your inquiry.
           </p>
           <Button
             type="submit"

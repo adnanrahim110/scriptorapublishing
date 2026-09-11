@@ -1,11 +1,15 @@
 import ContactForm from "@/components/contact/contact-form";
+import Button from "@/components/ui/button";
 import { contactDetails } from "@/content/global";
+import { homeContact, homeContactServices, homeMedia } from "@/content/home";
 import { Mail } from "lucide-react";
-
+import Image from "next/image";
 import SectionHeading from "./section-heading";
 
 const ContactSection = () => {
-  const emailContact = contactDetails.find((detail) => detail.label === "Email");
+  const emailContact = contactDetails.find(
+    (detail) => detail.label === "Email",
+  );
   const contactEmail = emailContact?.value ?? "info@scriptorapublishing.com";
 
   return (
@@ -21,14 +25,11 @@ const ContactSection = () => {
       <div className="container relative">
         <div id="contact-section-title">
           <SectionHeading
-            index="10"
-            eyebrow="The manuscript desk"
-            title="Bring us the draft. Tell us what it could become."
-            description="Share the current shape of the project and the kind of help you need. The form validates each field before securely sending your inquiry."
+            title={homeContact.title}
+            description={homeContact.description}
             inverted
           />
         </div>
-
         <div className="mt-14 grid border-y border-white/20 lg:mt-20 lg:grid-cols-12">
           <aside className="relative border-b border-white/20 bg-primary-900 p-6 sm:p-8 lg:col-span-4 lg:border-b-0 lg:border-r lg:p-10">
             <span
@@ -36,40 +37,34 @@ const ContactSection = () => {
               className="absolute inset-3 border border-white/10"
             />
             <div className="relative">
-              <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-primary-200">
-                Project folio / new inquiry
-              </p>
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src={homeMedia.conversation.src}
+                  alt={homeMedia.conversation.alt}
+                  fill
+                  sizes="(max-width: 1023px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="mt-10 max-w-sm font-heading text-4xl font-medium leading-[1.02] text-white sm:text-5xl">
-                Start with the book, not the package.
+                {homeContact.subtitle}
               </h3>
-              <p className="mt-6 max-w-sm text-sm leading-6 text-white/60">
-                A useful first note explains what you are writing, where the
-                manuscript stands, and what feels unresolved.
+              <p className="mt-6 max-w-sm text-sm leading-6 text-white/70">
+                {homeContact.conclusion}
               </p>
-
-              <ol className="mt-12 border-y border-white/15">
-                {["Your details", "Project service", "Manuscript note"].map(
-                  (item, index) => (
-                    <li
-                      key={item}
-                      className="grid min-h-14 grid-cols-[28px_1fr] items-center gap-3 border-b border-white/15 last:border-b-0"
-                    >
-                      <span className="font-mono text-[8px] text-primary-300">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-xs font-semibold uppercase tracking-[0.1em] text-white/75">
-                        {item}
-                      </span>
-                    </li>
-                  ),
-                )}
-              </ol>
-
+              <Button
+                href="/contact-us"
+                variant="outline"
+                size="md"
+                className="mt-8 max-w-full border-white/30 text-white hover:border-primary-300"
+              >
+                {homeContact.secondaryAction}
+              </Button>
               <a
                 href={`mailto:${contactEmail}`}
                 className="mt-12 flex items-center gap-3 border-t border-white/15 pt-5 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-300/70"
               >
-                <span className="flex size-9 items-center justify-center border border-white/20">
+                <span className="flex size-9 shrink-0 items-center justify-center border border-white/20">
                   <Mail
                     aria-hidden="true"
                     className="size-4"
@@ -80,9 +75,12 @@ const ContactSection = () => {
               </a>
             </div>
           </aside>
-
           <ContactForm
             idPrefix="home-contact"
+            services={homeContactServices}
+            eyebrow=""
+            description={homeContact.invitation}
+            submitLabel={homeContact.action}
             className="p-5 sm:p-8 lg:col-span-8 lg:p-10 xl:p-12"
           />
         </div>
@@ -90,5 +88,4 @@ const ContactSection = () => {
     </section>
   );
 };
-
 export default ContactSection;

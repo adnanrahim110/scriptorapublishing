@@ -12,6 +12,5 @@ export default function FooterRouter() {
     return <ChildrenFooter />;
   }
 
-  return <Footer />;
+  return <Footer homepage={pathname === "/"} />;
 }
-

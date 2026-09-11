@@ -2,8 +2,8 @@ import Title from "@/components/ui/title";
 import { cn } from "@/utils/cn";
 
 type SectionHeadingProps = {
-  index: string;
-  eyebrow: string;
+  index?: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   inverted?: boolean;
@@ -11,7 +11,6 @@ type SectionHeadingProps = {
 };
 
 const SectionHeading = ({
-  index,
   eyebrow,
   title,
   description,
@@ -26,32 +25,31 @@ const SectionHeading = ({
         className,
       )}
     >
-      <div className="flex items-start gap-3 lg:col-span-2">
+      <div
+        className={cn(
+          "items-start gap-3 lg:col-span-2",
+          eyebrow ? "flex" : "hidden lg:flex",
+        )}
+      >
         <span
           aria-hidden="true"
           className={cn(
-            "mt-2 block h-px w-8 shrink-0",
+            "mt-1.5 block h-px w-8 shrink-0",
             inverted ? "bg-primary-300" : "bg-primary-600",
           )}
         />
-        <div>
-          <p
-            className={cn(
-              "font-mono text-[9px] font-semibold uppercase tracking-[0.18em]",
-              inverted ? "text-primary-200" : "text-primary-700",
-            )}
-          >
-            Plate {index}
-          </p>
-          <p
-            className={cn(
-              "mt-1 font-mono text-[8px] uppercase tracking-[0.16em]",
-              inverted ? "text-white/45" : "text-neutral-500",
-            )}
-          >
-            {eyebrow}
-          </p>
-        </div>
+        {eyebrow && (
+          <div>
+            <p
+              className={cn(
+                "font-mono text-[9px] font-semibold uppercase tracking-[0.18em]",
+                inverted ? "text-primary-200" : "text-primary-700",
+              )}
+            >
+              {eyebrow}
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="lg:col-span-10 lg:grid lg:grid-cols-10 lg:gap-8">

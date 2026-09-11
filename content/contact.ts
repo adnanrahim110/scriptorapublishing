@@ -1,3 +1,16 @@
+export const contactServices = [
+  "Book publishing",
+  "Ghostwriting",
+  "Editing & proofreading",
+  "Book cover design",
+  "Book formatting",
+  "eBook creation",
+  "Audiobook production",
+  "Book distribution",
+  "Book marketing",
+  "Author website design",
+] as const;
+
 export const contactHero = {
   eyebrow: "Contact / The manuscript desk",
   title: "A good publishing conversation starts with the manuscript.",
@@ -11,7 +24,11 @@ export const contactHero = {
     label: "Email the studio",
     href: "mailto:info@scriptorapublishing.com",
   },
-  notes: ["Working drafts welcome", "No-obligation introduction", "Scope before production"],
+  notes: [
+    "Working drafts welcome",
+    "No-obligation introduction",
+    "Scope before production",
+  ],
 } as const;
 
 export const contactLedger = {

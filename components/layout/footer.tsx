@@ -2,6 +2,7 @@ import Button from "@/components/ui/button";
 import Title from "@/components/ui/title";
 import { brand, contactDetails, navigationLink } from "@/content/global";
 import { legalLinks } from "@/content/legal";
+import { homeBrandStatement, homeFooter } from "@/content/home";
 import { cn } from "@/utils/cn";
 import { ArrowUp, Mail, Phone } from "lucide-react";
 import Image from "next/image";
@@ -68,8 +69,13 @@ const FooterLink = ({
   </Link>
 );
 
-const Footer = () => {
+const Footer = ({ homepage = false }: { homepage?: boolean }) => {
   const currentYear = new Date().getFullYear();
+  const visibleExploreLinks = homepage ? homeFooter.explore : exploreLinks;
+  const visibleServiceLinks = homepage ? homeFooter.services : serviceLinks;
+  const visibleContacts = homepage
+    ? footerContacts.filter((detail) => typeof detail.href === "string")
+    : footerContacts;
 
   return (
     <footer
@@ -93,21 +99,27 @@ const Footer = () => {
               className="absolute inset-3 border border-white/8"
             />
             <div className="relative flex h-full flex-col">
-              <div className="flex items-center justify-between gap-6 border-b border-white/15 pb-4">
-                <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-200">
-                  Scriptora / Publishing colophon
-                </p>
-                <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-white/35">
-                  Folio / Final
-                </span>
-              </div>
+              {!homepage && (
+                <div className="flex items-center justify-between gap-6 border-b border-white/15 pb-4">
+                  <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-200">
+                    Scriptora / Publishing colophon
+                  </p>
+                  <span className="font-mono text-[8px] uppercase tracking-[0.15em] text-white/35">
+                    Folio / Final
+                  </span>
+                </div>
+              )}
 
               <Title
                 id="footer-title"
                 as="h2"
                 size="display"
                 tone="inverse"
-                highlight="readers never have to notice"
+                highlight={
+                  homepage
+                    ? "Publishing Partner."
+                    : "readers never have to notice"
+                }
                 highlightTone="primary"
                 weight="medium"
                 leading="tight"
@@ -115,21 +127,30 @@ const Footer = () => {
                 revealFrom="left"
                 className="mt-12 max-w-4xl text-[clamp(2.5rem,5.7vw,5.5rem)]"
               >
-                Books are made in the details readers never have to notice.
+                {homepage
+                  ? homeBrandStatement.title
+                  : "Books are made in the details readers never have to notice."}
               </Title>
 
               <div className="mt-9 grid gap-8 border-t border-white/15 pt-6 sm:grid-cols-[1fr_auto] sm:items-end lg:mt-auto">
                 <p className="max-w-xl text-sm leading-6 text-white/60 sm:text-base sm:leading-7">
-                  One studio for the editorial judgment, visual craft,
-                  production detail, and release preparation that turn a
-                  manuscript into a considered volume.
+                  {homepage ? (
+                    <>
+                      {homeBrandStatement.description}{" "}
+                      <span className="mt-3 block font-semibold text-white">
+                        {homeBrandStatement.conclusion}
+                      </span>
+                    </>
+                  ) : (
+                    "One studio for the editorial judgment, visual craft, production detail, and release preparation that turn a manuscript into a considered volume."
+                  )}
                 </p>
                 <Button
-                  href="/#services"
+                  href={homepage ? "/#contact" : "/#services"}
                   size="lg"
-                  className="w-full sm:w-auto sm:min-w-48"
+                  className="w-full max-w-full sm:w-auto sm:min-w-48 [&_[data-slot=button-label]]:whitespace-normal"
                 >
-                  Review the services
+                  {homepage ? homeBrandStatement.action : "Review the services"}
                 </Button>
               </div>
             </div>
@@ -156,11 +177,18 @@ const Footer = () => {
               </div>
 
               <p className="mt-12 font-heading text-3xl font-medium leading-[1.04] text-white sm:text-4xl">
-                Your story, shaped with editorial conviction.
+                {homepage
+                  ? "Your Publishing Partner"
+                  : "Your story, shaped with editorial conviction."}
               </p>
+              {homepage && (
+                <p className="mt-5 text-sm leading-6 text-white/70">
+                  {homeFooter.description}
+                </p>
+              )}
 
               <dl className="mt-12 border-y border-white/15 lg:mt-auto">
-                {footerContacts.map((detail) => {
+                {visibleContacts.map((detail) => {
                   const Icon =
                     contactIcons[detail.label as keyof typeof contactIcons];
                   const value = (
@@ -211,10 +239,10 @@ const Footer = () => {
         <div className="grid border-b border-white/15 lg:grid-cols-12">
           <section className="border-b border-white/15 px-5 py-8 sm:px-7 lg:col-span-4 lg:border-b-0 lg:border-r lg:px-8 lg:py-10">
             <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-200">
-              Studio index / 01
+              {homepage ? "Explore" : "Studio index / 01"}
             </p>
             <nav aria-label="Footer primary navigation" className="mt-5">
-              {exploreLinks.map((item, index) =>
+              {visibleExploreLinks.map((item, index) =>
                 "href" in item && item.href ? (
                   <FooterLink
                     key={item.label}
@@ -230,17 +258,21 @@ const Footer = () => {
           <section className="px-5 py-8 sm:px-7 lg:col-span-8 lg:px-8 lg:py-10">
             <div className="flex items-center justify-between gap-6">
               <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-200">
-                Service index / {String(serviceLinks.length).padStart(2, "0")}
+                {homepage
+                  ? "Services"
+                  : `Service index / ${String(serviceLinks.length).padStart(2, "0")}`}
               </p>
-              <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/30">
-                Draft to audience
-              </span>
+              {!homepage && (
+                <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/30">
+                  Draft to audience
+                </span>
+              )}
             </div>
             <nav
               aria-label="Footer service navigation"
               className="mt-5 grid sm:grid-cols-2 sm:gap-x-8"
             >
-              {serviceLinks.map((item, index) => (
+              {visibleServiceLinks.map((item, index) => (
                 <FooterLink
                   key={item.href}
                   href={item.href}
@@ -249,6 +281,23 @@ const Footer = () => {
                 />
               ))}
             </nav>
+            {homepage && (
+              <div className="mt-8 border-t border-white/15 pt-6">
+                <h3 className="font-heading text-2xl font-medium text-white">
+                  Start With Your Book
+                </h3>
+                <p className="mt-3 max-w-lg text-sm leading-6 text-white/65">
+                  {homeFooter.invitation}
+                </p>
+                <Button
+                  href="/#contact"
+                  variant="outline"
+                  className="mt-5 border-white/20 text-white"
+                >
+                  Talk to Scriptora
+                </Button>
+              </div>
+            )}
           </section>
         </div>
 
@@ -263,7 +312,8 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between border-t border-white/15 backdrop-blur-xs px-2">
           <p className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/35">
-            © {currentYear} {brand.name}. All rights reserved.
+            © {currentYear} {homepage ? "Scriptora" : brand.name}. All rights
+            reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
             <nav

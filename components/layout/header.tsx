@@ -124,6 +124,7 @@ function MobileLink({
 
 const Header = () => {
   const pathname = usePathname();
+  const homepage = pathname === "/";
   const [isAtTop, setIsAtTop] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -393,15 +394,19 @@ const Header = () => {
                         >
                           <div className="grid grid-cols-[1fr_auto] items-end gap-4 border-b border-neutral-300 pb-4">
                             <div>
-                              <p className="mb-1 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-primary-600">
-                                Services index /{" "}
-                                {String(services.length).padStart(2, "0")}
-                              </p>
+                              {!homepage && (
+                                <p className="mb-1 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-primary-600">
+                                  Services index /{" "}
+                                  {String(services.length).padStart(2, "0")}
+                                </p>
+                              )}
                               <h2
                                 id="services-menu-title"
                                 className="font-heading text-2xl font-medium text-neutral-950"
                               >
-                                Publishing, from draft to audience.
+                                {homepage
+                                  ? "Everything Your Book Needs."
+                                  : "Publishing, from draft to audience."}
                               </h2>
                             </div>
                             <Button
@@ -409,7 +414,9 @@ const Header = () => {
                               size="sm"
                               variant="outline"
                             >
-                              Discuss a project
+                              {homepage
+                                ? "Start a Conversation"
+                                : "Discuss a project"}
                             </Button>
                           </div>
 
@@ -480,7 +487,7 @@ const Header = () => {
               size={isAtTop ? "md" : "sm"}
               className="min-w-36 transition-[height] duration-400"
             >
-              Start a project
+              {homepage ? "Start a Conversation" : "Start a project"}
             </Button>
           </div>
 
@@ -494,7 +501,7 @@ const Header = () => {
             className="group/menu relative flex h-12 items-center gap-2 justify-self-end rounded-sm border border-neutral-400 px-3 text-[10px] font-bold uppercase tracking-[0.16em] text-neutral-900 transition-transform duration-200 active:translate-x-px active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400/65 focus-visible:ring-offset-2 xl:hidden"
           >
             <span className="hidden sm:inline">
-              {mobileMenuOpen ? "Close" : "Index"}
+              {mobileMenuOpen ? "Close" : homepage ? "Menu" : "Index"}
             </span>
             <span className="relative block size-4 overflow-hidden">
               <Menu
@@ -581,11 +588,13 @@ const Header = () => {
           <div className="relative h-full overflow-y-auto overscroll-contain pb-6 pl-16 pr-4 pt-24 sm:pl-20 sm:pr-8">
             <div className="mx-auto max-w-xl">
               <div className="border-b border-neutral-300 pb-4">
-                <p className="mb-1 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-primary-600">
-                  Scriptora / Navigation index
-                </p>
+                {!homepage && (
+                  <p className="mb-1 font-mono text-[9px] font-medium uppercase tracking-[0.2em] text-primary-600">
+                    Scriptora / Navigation index
+                  </p>
+                )}
                 <h2 className="font-heading text-2xl font-medium text-neutral-950 sm:text-[28px]">
-                  Choose the next chapter.
+                  {homepage ? "Explore Scriptora" : "Choose the next chapter."}
                 </h2>
               </div>
 
@@ -711,7 +720,9 @@ const Header = () => {
                   id="mobile-contact-title"
                   className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500"
                 >
-                  Have a manuscript in mind?
+                  {homepage
+                    ? "Tell Us About Your Book"
+                    : "Have a manuscript in mind?"}
                 </h3>
                 {email && typeof email.href === "string" && (
                   <address className="mb-4 not-italic">
@@ -729,7 +740,7 @@ const Header = () => {
                   </address>
                 )}
                 <Button href={contactHref} onClick={closeMobileMenu} fullWidth>
-                  Start a project
+                  {homepage ? "Start a Conversation" : "Start a project"}
                 </Button>
               </section>
             </div>

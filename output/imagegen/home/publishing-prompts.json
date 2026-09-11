@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "manuscript.png",
+      "path": "D:/xampp_old/htdocs/sbar/scriptora/output/imagegen/home/manuscript.png",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a090b2-79b6-79b1-aa43-2f76200b11d0\\exec-a442bbeb-83ac-49c6-b39b-2a14105a208e.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: homepage editorial photograph for a professional book publishing service, manuscript development block. Portrait 2:3 composition. Primary request: tight editorial closeup of an author's natural hand holding a graphite pencil and thoughtfully annotating a substantial printed manuscript on an oak desk, with a simple notebook beside it. Pages should feel substantial and real, with text softly out of focus and unreadable. Center important hand, pencil and pages for a narrow portrait crop. Style: premium authentic editorial photography, tactile paper, warm ivory, chestnut and soft tobacco palette, soft natural window light. No readable copy, no brand names, no fictional book titles, no watermarks, no collage, no UI. Natural anatomically correct hand, thoughtful quiet publishing atmosphere.",
+      "qa": "Inspected generated output inline: relevant subject, warm editorial style, valid portrait image."
+    },
+    {
+      "name": "design.png",
+      "path": "D:/xampp_old/htdocs/sbar/scriptora/output/imagegen/home/design.png",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a090b2-79b6-79b1-aa43-2f76200b11d0\\exec-bdcf4d0d-06c1-4cee-ba7b-6896b870f438.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: homepage editorial photograph for a professional book publishing service, book design block. Portrait 2:3 composition. Primary request: tight closeup of a professional book designer's workspace on warm oak, showing a carefully composed open page-layout proof spread and a thoughtful arrangement of small original abstract cover-art color swatches and an artist's brush. Center the proofs and swatches so the image works in a narrow portrait crop. Pages have subtle layout lines and out-of-focus unreadable print. Style: premium authentic editorial photography, tactile uncoated cream paper and genuine art materials, warm ivory, chestnut and soft tobacco with restrained earthy ink colors, soft natural window light. Quiet craftsmanship mood. No readable copy, no brand names, no fictional book titles, no watermark, no collage, no UI or computer screens.",
+      "qa": "Inspected generated output inline: relevant subject, warm editorial style, valid portrait image."
+    },
+    {
+      "name": "finished-book.png",
+      "path": "D:/xampp_old/htdocs/sbar/scriptora/output/imagegen/home/finished-book.png",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a090b2-79b6-79b1-aa43-2f76200b11d0\\exec-62e2aa05-c702-4fd1-8184-275f2a85cf4a.png",
+      "prompt": "Use case: product-mockup. Asset type: homepage editorial photograph for a professional book publishing service, finished publishing block. Portrait 2:3 composition. Primary request: a beautifully finished unlettered chestnut brown clothbound hardcover book standing upright on a warm editorial surface, beside an open cream-page book lying naturally in the foreground. Genuine book binding, convincing page edges, tactile woven cloth and warm oak surface. Center the standing book and open pages for a narrow portrait crop; full book visible. Style: premium realistic publishing product photography with soft natural window light, warm ivory, chestnut and soft tobacco palette, quiet refined craft atmosphere. Cover and spine completely unlettered. No readable copy, no brand names, no fictional book titles, no watermark, no collage, no UI. Avoid floating objects, impossible binding, text, logos.",
+      "qa": "Inspected generated output inline: relevant subject, warm editorial style, valid portrait image."
+    },
+    {
+      "name": "conversation.png",
+      "path": "D:/xampp_old/htdocs/sbar/scriptora/output/imagegen/home/conversation.png",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a090b2-79b6-79b1-aa43-2f76200b11d0\\exec-2701cf08-e2c0-4dfe-91ac-fb329ad737ba.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: homepage editorial photograph for a professional book publishing service, author consultation block. Portrait 2:3 composition. Primary request: candid medium closeup of an adult author and an adult publishing editor sitting together at a warm oak daylight table thoughtfully reviewing a printed manuscript. Center composition on manuscript pages and their relaxed natural hands; people only partly visible above and around the table, attentive body language. One person gently indicates a passage with a pencil while the other rests a hand near the pages. Invented everyday people, not representing actual staff or clients. Premium authentic editorial photography, tactile paper and simple neutral linen clothing, warm ivory, chestnut and soft tobacco palette, soft natural window light, welcoming quiet publishing studio. Text on manuscript is out of focus and unreadable. Anatomically correct hands. No readable copy, no brand names, no fictional book titles, no watermarks, no collage, no UI.",
+      "qa": "Inspected generated output inline: relevant subject, warm editorial style, valid portrait image."
+    },
+    {
+      "name": "readers.png",
+      "path": "D:/xampp_old/htdocs/sbar/scriptora/output/imagegen/home/readers.png",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a090b2-79b6-79b1-aa43-2f76200b11d0\\exec-e406c68c-174c-4573-ae31-cd28adfa45aa.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: homepage editorial photograph for a professional book publishing service, reaching readers in print and digital block. Portrait 2:3 image, essential subject concentrated in center so it also crops beautifully square. Primary request: warmly lit independent bookshop with a reading table in the foreground holding several tactile unlettered printed books, one open book, and one simple unbranded e-reader lying at a natural slight angle. E-reader screen suggests a reading page with softly blurred unreadable lines. A few real adult readers subtly blurred in the distance browsing shelves, atmospheric and secondary. Premium authentic editorial photography, soft natural window light and gentle warm shop lighting, warm ivory, chestnut and soft tobacco palette, genuine woven cloth book covers, cream paper and oak. No readable copy, no brand names, no fictional book titles, no watermark, no collage, no UI mockup. All books and screen occupy one convincing real physical scene.",
+      "qa": "Inspected generated output inline: relevant subject, warm editorial style, valid portrait image."
+    }
+  ]
+}
