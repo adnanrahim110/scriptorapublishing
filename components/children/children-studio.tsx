@@ -35,18 +35,16 @@ export default function ChildrenStudio() {
           <div className="flex flex-col lg:col-span-7 lg:pl-6">
             <div className="max-w-3xl">
               <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#a95437]">
-                A children’s publishing studio
+                A CHILDREN'S PUBLISHING STUDIO
               </p>
               <h2
                 id="children-studio-title"
                 className="mt-4 font-[family-name:var(--font-children)] text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl lg:text-6xl"
               >
-                More than a manuscript with pictures added.
+                Children are wonderfully difficult readers to fool.
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-7 text-[#625969] sm:text-lg sm:leading-8">
-                Young readers notice everything: the sound of a sentence, the
-                look on a character’s face, and the suspense before a page
-                turn. Our process treats those details as one connected craft.
+                They know when something is funny. They know when something is boring. They notice the tiny creature hiding in the corner of page six. They remember the character who made them laugh. And they'll happily interrupt bedtime because you skipped their favorite page. That's why creating a children's book isn't simply a matter of shortening the manuscript and adding colorful pictures. Words, rhythm, characters, illustration, typography, pacing, and page turns have to work together as one reading experience.
               </p>
             </div>
 

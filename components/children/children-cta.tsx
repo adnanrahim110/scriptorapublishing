@@ -5,7 +5,7 @@ export default function ChildrenCta() {
   return (
     <section className="bg-[#fff7e8] pb-18 sm:pb-24 lg:pb-30">
       <div className="container">
-        <div className="relative min-h-[650px] overflow-hidden rounded-[2.25rem] bg-[#153d55] sm:min-h-[700px] lg:min-h-[680px] lg:rounded-[3rem]">
+        <div className="relative min-h-140 overflow-hidden rounded-[2.25rem] bg-[#153d55] sm:min-h-170 lg:min-h-160 lg:rounded-[3rem]">
           <Image
             src="/imgs/children/readers-harbor.webp"
             alt="Fox, bear, and rabbit sailing on an open book toward a glowing library"
@@ -22,12 +22,16 @@ export default function ChildrenCta() {
             <p className="text-[10px] font-bold uppercase tracking-[.17em] text-[#ffd85a]">
               Your next chapter
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-children)] text-3xl font-semibold leading-[1] tracking-[-.03em] text-white sm:text-4xl lg:text-5xl">
-              Let’s give your story a world of its own.
+            <h2 className="mt-4 font-(family-name:--font-children) text-3xl font-semibold leading-none tracking-[-.03em] text-white sm:text-4xl lg:text-5xl">
+              Let's give your story a world of its own.
             </h2>
             <p className="mt-6 max-w-xl text-sm leading-7 text-white/72 sm:text-base">
-              Tell us what you have—a finished manuscript, a rough draft, or
-              simply an idea. We’ll help define the clearest path forward.
+              You don't need to know the terminology. You don't need to
+              understand trim sizes, bleeds, spreads, typography, or publishing
+              specifications. And you certainly don't need to have every answer
+              before speaking with us. Bring the manuscript. Bring the sketch.
+              Bring the character. Bring the half-finished idea you've been
+              thinking about for three years. We'll start with the story.
             </p>
             <div className="mt-8">
               <Button
@@ -35,7 +39,7 @@ export default function ChildrenCta() {
                 size="lg"
                 className="border-[#ffd85a] bg-[#ffd85a] text-[#25223d]"
               >
-                Share your story
+                Share Your Story
               </Button>
             </div>
           </div>

@@ -11,19 +11,17 @@ export default function ReaderPaths() {
         <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#a95437]">
-              Choose the reading experience
+              CHOOSE THE READING EXPERIENCE
             </p>
             <h2
               id="reader-paths-title"
               className="mt-4 max-w-xl font-[family-name:var(--font-children)] text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl"
             >
-              Every age turns a different kind of page.
+              A five-year-old and a ten-year-old don't read the same story.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-7 text-[#625969] lg:justify-self-end lg:text-lg lg:leading-8">
-            A children’s book works when language, visual rhythm, and format
-            match the reader it is made for. We shape the publishing path
-            around that relationship from the start.
+            And they shouldn't be published the same way. Children's publishing begins with understanding who will turn the pages. Vocabulary, sentence length, illustration density, typography, pacing, page turns, and even trim size can change with the age and reading confidence of your audience. We shape the book around the reader from the beginning.
           </p>
         </div>
 
@@ -68,6 +66,12 @@ export default function ReaderPaths() {
               />
             </article>
           ))}
+        </div>
+
+        <div className="mt-16 text-center max-w-3xl sm:mx-auto px-4">
+          <p className="font-[family-name:var(--font-children)] text-2xl font-semibold leading-tight text-[#25223d] sm:text-3xl">
+            The words shouldn't explain the pictures. The pictures shouldn't repeat the words. <span className="block mt-2 text-[#a95437]">Together, they should tell more than either could alone.</span>
+          </p>
         </div>
       </div>
     </section>

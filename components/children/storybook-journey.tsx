@@ -46,18 +46,17 @@ export default function StorybookJourney() {
         <div className="grid gap-8 border-b border-white/15 pb-10 lg:grid-cols-[1fr_.8fr] lg:items-end">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#ffd85a]">
-              A scroll-through story
+              FROM "WHAT IF..." TO "READ IT AGAIN."
             </p>
             <h2
               id="storybook-journey-title"
               className="mt-4 max-w-4xl font-[family-name:var(--font-children)] text-4xl font-semibold leading-[.96] tracking-[-.035em] text-white sm:text-5xl lg:text-6xl"
             >
-              Five chapters from spark to bookshelf.
+              Five chapters from imagination to bookshelf.
             </h2>
           </div>
           <p className="max-w-xl text-base leading-7 text-white/68 lg:justify-self-end">
-            Each stage has a clear purpose and a natural approval point, so
-            decisions happen before the next layer of the book is built.
+            Maybe you have a finished manuscript. Maybe you have an idea you can't stop thinking about. Our process creates clear creative stages and approval points so the story, characters, illustrations, and book are developed deliberately—not all at once.
           </p>
         </div>
 

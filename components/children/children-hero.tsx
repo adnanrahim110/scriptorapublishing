@@ -2,7 +2,12 @@
 
 import Button from "@/components/ui/button";
 import { childrenPage } from "@/content/children";
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -21,10 +26,10 @@ export default function ChildrenHero() {
     <section
       ref={sectionRef}
       aria-labelledby="children-hero-title"
-      className="relative overflow-hidden bg-[#fff7e8] pb-10 pt-28 sm:pb-14 sm:pt-32 lg:pb-18 lg:pt-36"
+      className="relative overflow-hidden bg-[#fff7e8] pb-10 pt-28 sm:pb-14 sm:pt-32 lg:pb-18 lg:pt-30"
     >
       <div className="container">
-        <div className="relative min-h-[720px] overflow-hidden rounded-[2rem] border border-[#e6d5bc] bg-[#fdf4df] shadow-[0_30px_90px_rgba(74,48,25,.12)] sm:min-h-[760px] lg:min-h-[710px] lg:rounded-[3rem]">
+        <div className="relative min-h-180 overflow-hidden rounded-4xl border border-[#e6d5bc] bg-[#fdf4df] shadow-[0_30px_90px_rgba(74,48,25,.12)] sm:min-h-190 lg:min-h-177.5 lg:rounded-[3rem]">
           <motion.div
             aria-hidden="true"
             className="absolute inset-0"
@@ -50,7 +55,7 @@ export default function ChildrenHero() {
           />
 
           <motion.div
-            className="relative z-10 flex min-h-[720px] max-w-3xl flex-col justify-start px-6 py-8 sm:min-h-[760px] sm:px-10 sm:py-12 lg:min-h-[710px] lg:justify-center lg:px-16 lg:py-16 xl:px-20"
+            className="relative z-10 flex min-h-180 max-w-3xl flex-col justify-start px-6 py-8 sm:min-h-190 sm:px-10 sm:py-12 lg:min-h-177.5 lg:justify-center lg:px-16 lg:py-16 xl:px-20"
             style={prefersReducedMotion ? undefined : { y: copyY }}
           >
             <div className="mb-8 flex w-fit items-center gap-3 rounded-full border border-[#e4bea4] bg-white/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#8a472e] backdrop-blur-md">
@@ -60,7 +65,7 @@ export default function ChildrenHero() {
 
             <h1
               id="children-hero-title"
-              className="max-w-3xl font-[family-name:var(--font-children)] text-[clamp(2.85rem,6vw,5.75rem)] font-semibold leading-[.9] tracking-[-.045em] text-[#25223d]"
+              className="max-w-3xl font-(family-name:--font-children) text-[clamp(2.85rem,5vw,4rem)] font-semibold leading-[1.05] tracking-[-.045em] text-[#25223d]"
             >
               <span className="text-[#e95749]">
                 {childrenPage.hero.titleLead}
@@ -78,7 +83,7 @@ export default function ChildrenHero() {
                 size="lg"
                 className="border-[#25223d] bg-[#25223d] text-white"
               >
-                Start your story
+                Bring Your Story to Life
               </Button>
               <Button
                 href="#storybook-journey"
@@ -87,7 +92,7 @@ export default function ChildrenHero() {
                 tone="secondary"
                 className="border-[#25223d] bg-[#fff7e8]/70 text-[#25223d] backdrop-blur-md"
               >
-                Follow the journey
+                See How We Create It
               </Button>
             </div>
 

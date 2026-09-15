@@ -11,18 +11,16 @@ export default function ChildrenDeliverables() {
         <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
             <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#24736d]">
-              Illustration direction
+              THE ART OF THE STORY
             </p>
             <h2
               id="children-art-title"
               className="mt-4 max-w-3xl font-[family-name:var(--font-children)] text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl lg:text-6xl"
             >
-              A visual language that belongs to your story.
+              Your story shouldn't look like somebody else's children's book.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-7 text-[#53636a] sm:text-lg sm:leading-8">
-              Style is never a preset pasted on top. We use references,
-              character studies, and color exploration to find a direction
-              that feels distinctive and right for the reader.
+              Illustration style isn't something we choose from a catalogue and paste over a manuscript. We begin with the story—its age group, humor, emotion, setting, characters, and pace. Then we explore visual references, character studies, palettes, textures, and composition until the artwork feels as though it could only belong to this book.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -64,7 +62,7 @@ export default function ChildrenDeliverables() {
             </figure>
             <div className="relative -mt-20 ml-5 rounded-[1.5rem] border border-[#d9ccb8] bg-[#fff9ec] p-6 shadow-[0_20px_60px_rgba(42,36,66,.16)] sm:ml-12 sm:p-7">
               <p className="text-[10px] font-bold uppercase tracking-[.16em] text-[#a95437]">
-                Your project may include
+                ONE STORY. ONE COORDINATED CREATIVE JOURNEY.
               </p>
               <ul className="mt-5 grid gap-x-5 gap-y-3 sm:grid-cols-2">
                 {childrenPage.deliverables.map((deliverable, index) => (

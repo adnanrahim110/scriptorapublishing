@@ -13,20 +13,20 @@ export default function ChildrenFaq() {
       className="bg-[#fff7e8] py-18 sm:py-24 lg:py-30"
     >
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-18">
-          <div>
+        <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-18 lg:items-start">
+          <div className="lg:sticky lg:top-32">
             <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#a95437]">
-              Before we begin
+              BEFORE THE FIRST PAGE
             </p>
             <h2
               id="children-faq-title"
-              className="mt-4 font-[family-name:var(--font-children)] text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl"
+              className="mt-4 font-(family-name:--font-children) text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl"
             >
               Questions from the story desk.
             </h2>
             <p className="mt-6 max-w-md text-base leading-7 text-[#625969]">
-              Every book follows a different route. These are the questions
-              that most often help authors find their starting point.
+              Every children's book begins differently. These are some of the
+              questions authors ask us before their project takes shape.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function ChildrenFaq() {
                       aria-controls={contentId}
                       onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     >
-                      <span className="font-[family-name:var(--font-children)] text-xl font-semibold leading-tight text-[#25223d] sm:text-2xl">
+                      <span className="font-(family-name:--font-children) text-xl font-semibold leading-tight text-[#25223d] sm:text-2xl">
                         {faq.question}
                       </span>
                       <span

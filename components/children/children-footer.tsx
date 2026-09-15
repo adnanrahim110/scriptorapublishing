@@ -22,13 +22,7 @@ const childServiceLinks = [
 
 const email = contactDetails.find((detail) => detail.label === "Email");
 
-function PlayfulFooterLink({
-  href,
-  label,
-}: {
-  href: string;
-  label: string;
-}) {
+function PlayfulFooterLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
@@ -51,11 +45,11 @@ export default function ChildrenFooter() {
       aria-labelledby="children-footer-title"
       className={`${childrenFont.variable} overflow-hidden bg-[#25223d] text-white`}
     >
-      <div className="container py-10 sm:py-14 lg:py-18">
-        <section className="relative overflow-hidden rounded-[2rem] bg-[#ff715f] p-7 text-[#25223d] sm:p-10 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-12 lg:p-12">
+      <div className="container pt-10 pb-2 sm:pt-14 lg:pt-18">
+        <section className="relative overflow-hidden rounded-4xl bg-[#ff715f] p-7 text-[#25223d] sm:p-10 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-12 lg:p-12">
           <div
             aria-hidden="true"
-            className="absolute -right-12 -top-16 size-52 rounded-full border-[34px] border-[#ffd85a]/65"
+            className="absolute -right-12 -top-16 size-52 rounded-full border-34 border-[#ffd85a]/65"
           />
           <div
             aria-hidden="true"
@@ -63,14 +57,21 @@ export default function ChildrenFooter() {
           />
           <div className="relative">
             <p className="text-[10px] font-bold uppercase tracking-[.17em]">
-              The end of this page. The start of your story.
+              THE END OF THIS PAGE. THE BEGINNING OF SOMETHING ELSE.
             </p>
             <h2
               id="children-footer-title"
-              className="mt-4 max-w-3xl font-[family-name:var(--font-children)] text-3xl font-semibold leading-[1] tracking-[-.035em] text-[#25223d] sm:text-4xl lg:text-5xl"
+              className="mt-4 max-w-3xl font-(family-name:--font-children) text-3xl font-semibold leading-none tracking-[-.035em] text-[#25223d] sm:text-4xl lg:text-5xl"
             >
-              Ready to turn your idea into a book young readers can hold?
+              Someday, this could be someone's favorite book.
             </h2>
+            <p className="mt-4 max-w-xl text-sm leading-6 text-[#25223d]/80">
+              That's the beautiful thing about children's stories. You never
+              quite know where they'll travel. Into a classroom, onto a library
+              shelf, or into the imagination of one child who asks:{" "}
+              <strong>"Can we read it again?"</strong> Let's make a book worthy
+              of the answer.
+            </p>
           </div>
           <div className="relative mt-8 lg:mt-0">
             <Button
@@ -78,7 +79,7 @@ export default function ChildrenFooter() {
               size="lg"
               className="border-[#25223d] bg-[#25223d] text-white"
             >
-              Begin the conversation
+              Begin Your Children's Book
             </Button>
           </div>
         </section>
@@ -103,7 +104,11 @@ export default function ChildrenFooter() {
                 className="mt-7 inline-flex items-center gap-3 rounded-full border border-white/16 bg-white/6 px-4 py-3 text-sm font-semibold text-white/78 transition-colors hover:border-[#ffd85a]/60 hover:text-white"
               >
                 <span className="flex size-8 items-center justify-center rounded-full bg-[#ffd85a] text-[#25223d]">
-                  <Mail aria-hidden="true" className="size-4" strokeWidth={1.8} />
+                  <Mail
+                    aria-hidden="true"
+                    className="size-4"
+                    strokeWidth={1.8}
+                  />
                 </span>
                 {email.value}
               </a>
@@ -173,4 +178,3 @@ export default function ChildrenFooter() {
     </footer>
   );
 }
-

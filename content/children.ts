@@ -1,180 +1,204 @@
 export const childrenPage = {
   hero: {
-    eyebrow: "Children’s book publishing",
-    titleLead: "Big little stories,",
-    titleTail: "beautifully brought to life.",
+    eyebrow: "CHILDREN'S BOOK PUBLISHING",
+    titleLead: "Little readers have big imaginations.",
+    titleTail: "Give yours somewhere unforgettable to go.",
     description:
-      "From a first spark to a finished picture book, we bring story, character, illustration, and publishing craft together in one thoughtful studio journey.",
-    note: "Built for young readers. Guided by your voice.",
+      "A children's book may use fewer words. That only makes every word, every page turn, and every illustration matter more. Scriptora brings children's book editing, illustration, character development, design, and publishing together around one thing: the experience of the child holding the book. From the first scribbled idea to the final printed copy, we help you create a story young readers will want to hear once—and then ask to hear again.",
+    note: "Made for young readers. Created around your voice.",
   },
   readerPaths: [
     {
       number: "01",
-      title: "Picture books",
-      age: "Typically ages 3–8",
+      title: "Picture Books",
+      age: "Typically Ages 3–8",
       description:
-        "Visual-first stories where rhythm, page turns, and expressive artwork do the storytelling together.",
+        "Where pictures tell half the story. For stories designed to be seen as much as heard. We consider read-aloud rhythm, visual storytelling, page turns, character expression, and the relationship between words and illustrations across every spread.",
       color: "#ff715f",
     },
     {
       number: "02",
-      title: "Early readers",
-      age: "Typically ages 5–9",
+      title: "Early Readers",
+      age: "Typically Ages 5–9",
       description:
-        "Clear, confidence-building books with inviting language, purposeful repetition, and lively visual cues.",
+        "Where reading starts to feel like an adventure. Clear language, inviting typography, purposeful repetition, manageable sentence structures, and visual cues help emerging readers move through the story with confidence—without making the book feel like homework.",
       color: "#35b8ad",
     },
     {
       number: "03",
-      title: "Illustrated chapters",
-      age: "Typically ages 7–12",
+      title: "Illustrated Chapter Books",
+      age: "Typically Ages 7–12",
       description:
-        "Longer adventures with memorable characters, readable structure, and illustrations placed for maximum impact.",
+        "Bigger stories for growing imaginations. Longer narratives need room to unfold. We help develop readable chapter structures, character arcs, pacing, visual breaks, and strategically placed illustrations that reward the reader without interrupting the adventure.",
       color: "#7067d8",
     },
   ],
   carePoints: [
     {
-      title: "Story shaping",
+      title: "Story Shaping",
       description:
-        "Age-aware editing, pacing, voice, and page-turn moments that keep the story clear without sanding away its charm.",
+        "Find the story children will remember. We look at age suitability, narrative clarity, character motivation, pacing, emotional beats, read-aloud rhythm, and the moments that deserve a page turn of their own.",
     },
     {
-      title: "Character worlds",
+      title: "Character Worlds",
       description:
-        "Character exploration, visual references, and setting direction designed to make every spread feel like the same world.",
+        "Create someone worth following to the next page. Memorable children's characters need more than an attractive drawing. We develop their expressions, proportions, personality, visual consistency, environments, and relationships so they feel like they belong to one living world.",
     },
     {
-      title: "Illustration & layout",
+      title: "Illustration & Book Design",
       description:
-        "A cohesive art direction, storyboard, full-page artwork, typography, and layouts that let words and pictures breathe.",
+        "Every spread should earn the next page turn. We develop illustration direction, storyboards, composition, typography, text placement, cover design, and interior layouts together so the artwork doesn't simply accompany the story—it helps tell it.",
     },
     {
-      title: "Print & digital production",
+      title: "Print & Digital Production",
       description:
-        "Careful proofing and production-ready files for the formats and distribution path selected for your book.",
+        "Made beautifully. Built properly. Once the creative work is approved, we prepare your children's book for its intended formats, including professional layout, print-ready files, cover production, proofing, and compatible digital editions where appropriate.",
     },
   ],
   journey: [
     {
-      chapter: "Chapter one",
-      title: "Find the story’s heartbeat",
+      chapter: "CHAPTER ONE",
+      title: "Find the heartbeat of the story.",
       description:
-        "We begin with the reader age, central feeling, characters, setting, and the moment you most want a child to remember.",
-      detail: "Creative brief · audience · tone",
+        "Before thinking about illustrations, we understand what makes the story matter. Who is it for? What should the child feel? Who will they root for? What will make them laugh, wonder, worry, or turn the page? And what should stay with them after the book closes?",
+      detail: "Story Concept · Audience · Characters · Emotional Core",
       image: "/imgs/children/story-workshop.webp",
       imageAlt:
-        "Fox, bear, and rabbit developing a story together in a treehouse studio",
+        "Cozy writer and illustrator studio in a magical treehouse setting",
       accent: "#ffd85a",
     },
     {
-      chapter: "Chapter two",
-      title: "Shape words for young ears",
+      chapter: "CHAPTER TWO",
+      title: "Write for little ears as carefully as little eyes.",
       description:
-        "Your manuscript is refined for clarity, rhythm, read-aloud flow, and age-appropriate vocabulary while protecting your voice.",
-      detail: "Editing · pacing · page turns",
+        "Children's books are often heard before they're read. We refine the manuscript for age-appropriate language, clarity, rhythm, repetition, dialogue, read-aloud flow, and pacing—while protecting the personality that made the story yours in the first place.",
+      detail: "Children's Book Editing · Rhythm · Pacing · Page Turns",
       image: "/imgs/children/story-workshop.webp",
       imageAlt:
-        "Storybook characters reviewing illustrated story cards and color notes",
+        "Creative process of writing and sketching children's book characters",
       accent: "#ff715f",
     },
     {
-      chapter: "Chapter three",
-      title: "Storyboard the adventure",
+      chapter: "CHAPTER THREE",
+      title: "See the book before we illustrate it.",
       description:
-        "We map each spread before final art begins, balancing quiet beats, reveals, text space, and visual movement across the book.",
-      detail: "Thumbnails · spreads · approvals",
+        "Before final artwork begins, we storyboard the journey. Which moment deserves a full spread? Where should the text breathe? When should a reveal wait until the page turns? Which details can the illustration tell so the words don't have to?",
+      detail: "Storyboards · Thumbnails · Spreads · Composition · Approvals",
       image: "/imgs/children/painted-journey.webp",
       imageAlt:
-        "Fox, bear, and rabbit travelling through a landscape of painted story pages",
+        "A richly painted landscape showing a magical journey across oversized picture-book pages",
       accent: "#35b8ad",
     },
     {
-      chapter: "Chapter four",
-      title: "Paint a world worth revisiting",
+      chapter: "CHAPTER FOUR",
+      title: "Build a world a child will recognize on every page.",
       description:
-        "Characters, environments, color, and typography are developed as one visual language, with review points before finalization.",
-      detail: "Characters · illustration · layout",
+        "Characters take shape. Expressions become familiar. Environments develop personality. Color establishes mood. Typography finds its place. Individual illustrations begin forming one continuous visual world.",
+      detail: "Character Design · Children's Book Illustration · Art Direction · Layout",
       image: "/imgs/children/painted-journey.webp",
       imageAlt:
-        "A richly painted journey through changing picture-book scenes",
+        "Whimsical characters traveling through a cinematic, magical adventure style story",
       accent: "#8d83ee",
     },
     {
-      chapter: "Final chapter",
-      title: "Prepare the book for readers",
+      chapter: "FINAL CHAPTER",
+      title: "Put the story into their hands.",
       description:
-        "We proof the complete book, prepare the agreed print and digital files, and guide the publishing setup for your chosen release path.",
-      detail: "Proofing · files · publishing",
+        "Once the words, artwork, cover, and layouts are approved, we bring everything together into the finished book. The idea that once existed only in your imagination becomes something a child can hold.",
+      detail: "Proofing · Print Files · Ebook Files · Publishing · Distribution",
       image: "/imgs/children/readers-harbor.webp",
       imageAlt:
-        "Fox, bear, and rabbit sailing on an open book toward a glowing library",
+        "A tiny sailboat made from an open book sailing toward a glowing library harbor at night",
       accent: "#f4a7c7",
     },
   ],
   artDirections: [
     {
-      title: "Soft & wonder-filled",
-      description: "Airy color, gentle texture, and room for quieter stories.",
+      title: "Soft & Wonder-Filled",
+      description: "For stories that whisper. Gentle textures, expressive details, airy compositions, and softer palettes for bedtime stories, emotional journeys, nature-led books, and quieter moments of wonder.",
       swatches: ["#f7c9a7", "#8ecac4", "#f7e4a1"],
     },
     {
-      title: "Bold & character-led",
-      description: "Confident shapes and expressions made for comic energy.",
+      title: "Bold & Character-Led",
+      description: "For personalities too big to stay inside the lines. Confident shapes, expressive faces, playful movement, and energetic compositions suited to humor, lively adventures, and unforgettable characters.",
       swatches: ["#ff715f", "#243f56", "#ffd85a"],
     },
     {
-      title: "Classic storybook",
-      description: "Painterly warmth with timeless detail and atmosphere.",
+      title: "Classic Storybook",
+      description: "For stories that should still feel beautiful years from now. Painterly warmth, tactile detail, rich environments, and timeless visual storytelling for books designed to feel treasured rather than temporary.",
       swatches: ["#a55a34", "#2d726f", "#e9c985"],
     },
     {
-      title: "Magical adventure",
-      description: "Cinematic light and layered worlds for bigger journeys.",
+      title: "Magical Adventure",
+      description: "For worlds that don't exist—yet somehow feel real. Cinematic lighting, imaginative environments, atmospheric depth, and layered detail for fantasy, adventure, folklore, and stories built around discovery.",
       swatches: ["#7067d8", "#153d55", "#f4a7c7"],
     },
   ],
   deliverables: [
-    "Story and audience brief",
-    "Edited manuscript",
-    "Character and art direction",
-    "Page-by-page storyboard",
-    "Final illustrations",
-    "Cover and interior layout",
-    "Proofed production files",
-    "Publishing setup guidance",
+    "Story & Audience Development",
+    "Children's Book Writing & Editing",
+    "Character Development",
+    "Page-by-Page Storyboarding",
+    "Custom Children's Book Illustrations",
+    "Cover & Interior Book Design",
+    "Production-Ready Files",
+    "Publishing & Distribution Guidance",
   ],
   faqs: [
     {
-      question: "Can you help if I only have an idea?",
+      question: "I only have an idea. Is that enough to start?",
       answer:
-        "Yes. We can begin with a concept, character, lesson, or rough draft and define the right writing, editing, illustration, and publishing path from there.",
+        "Absolutely. Some children's books arrive as finished manuscripts; others begin with a character, lesson, bedtime story, rough outline, or a few lines scribbled in a notebook. We can assess what you have and determine whether the next step should be story development, children's book writing, editing, illustration planning, or production.",
     },
     {
-      question: "How is the illustration style chosen?",
+      question: "How do I know what age group my children's book is for?",
       answer:
-        "We align the art direction with the reader age, tone, genre, and emotional world of the story. Visual references and character directions are approved before final illustrations move ahead.",
+        "We'll consider the concept, word count, vocabulary, narrative complexity, illustration needs, and intended reading experience. These factors help establish whether the project is best suited to a picture book, early reader, illustrated chapter book, or another format.",
     },
     {
-      question: "Will I review the words and artwork?",
+      question: "Can you help shorten or edit my children's book?",
       answer:
-        "Yes. The workflow includes clear review points for the manuscript, character direction, storyboard, illustrations, and laid-out book so feedback happens at the right stage.",
+        "Yes. Children's book editing often involves more than correcting grammar. We can work on clarity, word economy, rhythm, repetition, vocabulary, pacing, dialogue, page-turn opportunities, and read-aloud flow while protecting the author's voice.",
     },
     {
-      question: "Can you prepare both print and digital editions?",
+      question: "Can I choose the illustration style?",
       answer:
-        "Yes. We can prepare the formats that suit your project, including print-ready interiors and covers plus compatible digital files where appropriate.",
+        "The visual direction is developed collaboratively. We consider your preferences alongside the story's age group, genre, emotional tone, characters, and intended reading experience. References and character direction are established before final illustration proceeds.",
     },
     {
-      question: "Do you work with picture books and chapter books?",
+      question: "Will my characters look consistent throughout the book?",
       answer:
-        "Yes. The process adapts to picture books, early readers, and illustrated chapter or middle-grade projects, each with different pacing, layout, and art requirements.",
+        "Character consistency is part of the illustration process. Appearance, proportions, clothing, expressions, recurring details, and environments are considered across the book so the same character doesn't mysteriously become somebody else halfway through the adventure.",
     },
     {
-      question: "Who owns the finished work?",
+      question: "Will I see the illustrations before the book is finalized?",
       answer:
-        "Ownership, licensing, source files, and usage terms are documented in your project agreement before production begins, so the rights position is clear from the start.",
+        "Yes. The workflow includes review points for relevant creative stages, which can include character direction, storyboard development, illustrations, cover design, and complete layouts.",
+    },
+    {
+      question: "How many illustrations does my children's book need?",
+      answer:
+        "There isn't one correct number. A 32-page picture book, early reader, activity book, and illustrated chapter book all use imagery differently. We determine illustration requirements from the manuscript, page plan, format, and visual storytelling needs rather than assigning artwork arbitrarily.",
+    },
+    {
+      question: "Can you create both the cover and interior illustrations?",
+      answer:
+        "Yes. Cover design and interior illustration can be developed as one visual system so the book feels consistent from the moment a reader sees the cover to the final page.",
+    },
+    {
+      question: "Can you prepare my children's book for print and ebook publication?",
+      answer:
+        "Yes. Depending on your project, we can prepare professional print files and suitable digital formats, with layout and production requirements handled according to the publishing route selected.",
+    },
+    {
+      question: "Can you help publish and distribute the finished children's book?",
+      answer:
+        "Yes. Scriptora can support the publishing and distribution stages after production. The exact platforms, formats, and distribution route are determined according to the publishing arrangement chosen for your project.",
+    },
+    {
+      question: "Who owns my story and finished book?",
+      answer:
+        "Ownership, licensing, illustration usage, source-file provisions, and other rights are clearly documented in your individual project agreement before production begins, so you understand the arrangement from the outset.",
     },
   ],
 } as const;
-
