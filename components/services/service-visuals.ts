@@ -28,7 +28,7 @@ const audio = {
 
 const childrens = {
   src: "/imgs/service-childrens-studio.webp",
-  alt: "An illustrated picture-book dummy, character sketches, and pencils in a children’s publishing studio",
+  alt: "An illustrated picture-book dummy, character sketches, and pencils in a children's publishing studio",
 } as const;
 
 const distribution = {
@@ -42,26 +42,56 @@ const publishing = {
   position: "50% 58%",
 } as const;
 
+const bpHero = {
+  src: "/imgs/bp_hero.jpg",
+  alt: "A beautiful, professionally bound book resting on a warm wooden desk",
+} as const;
+
+const bpDetail = {
+  src: "/imgs/bp_detail.jpg",
+  alt: "A publishing studio desk showing a production process with print and digital master files",
+} as const;
+
+const gwHero = {
+  src: "/imgs/gw_hero.jpg",
+  alt: "A writer's collaborative desk with voice notes, old journals, and research folders",
+} as const;
+
+const gwDetail = {
+  src: "/imgs/gw_detail.jpg",
+  alt: "Chapter-by-chapter architecture spread out on a wooden table with working drafts",
+} as const;
+
+const edHero = {
+  src: "/imgs/ed_hero.jpg",
+  alt: "A marked manuscript with editorial corrections in a warm editorial studio",
+} as const;
+
+const edDetail = {
+  src: "/imgs/ed_detail.jpg",
+  alt: "A clean, polished accepted manuscript next to an editorial style sheet",
+} as const;
+
 const serviceVisuals: Record<ServiceSlug, ServiceVisualSet> = {
   "childrens-book-publishing": {
     hero: childrens,
     detail: design,
   },
   "book-publishing-services": {
-    hero: publishing,
-    detail: editorial,
+    hero: bpHero,
+    detail: bpDetail,
   },
   "book-marketing-services": {
     hero: distribution,
     detail: design,
   },
   "ghostwriting-services": {
-    hero: editorial,
-    detail: publishing,
+    hero: gwHero,
+    detail: gwDetail,
   },
   "book-editing-and-proofreading-services": {
-    hero: editorial,
-    detail: publishing,
+    hero: edHero,
+    detail: edDetail,
   },
   "author-website-design-services": {
     hero: design,

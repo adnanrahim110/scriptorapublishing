@@ -176,109 +176,107 @@ export const serviceDetails = {
     slug: "book-publishing-services",
     name: "Book Publishing",
     code: "PB / 02",
-    eyebrow: "End-to-end publishing",
-    heroTitle: "Move from manuscript to marketplace without losing the thread.",
-    highlight: "without losing the thread",
+    eyebrow: "BOOK PUBLISHING",
+    heroTitle: "Finishing the manuscript is one achievement. Making it a book is another.",
+    highlight: "Making it a book is another.",
     description:
-      "One coordinated publishing path for editorial work, design, production, metadata, distribution preparation, and the decisions that connect them.",
+      "Between the final word and the finished book are hundreds of decisions readers may never notice, but every one of them shapes what they eventually hold. Scriptora brings editing, design, formatting, production, publishing, metadata, and distribution preparation into one coordinated path, so your manuscript doesn't simply become available. It becomes a book prepared to belong in the world.",
     introduction:
-      "Publishing becomes difficult when every stage begins with a new brief. Scriptora keeps one project record from the first manuscript review to the final files, so the editorial intention survives the handoff into design, production, and release.",
-    artifacts: ["Publishing plan", "Master files", "Release record"],
-    outcomesTitle: "A complete publishing path, shaped around the actual book.",
+      "Publishing begins where writing ends. The manuscript has to be assessed. Editorial questions need to be settled. The cover must speak to the right reader. Interior pages need structure and rhythm. Print and digital editions require different preparation. Metadata has to describe the book accurately. Publication details need to agree with one another. None of these decisions lives in isolation. That's why Scriptora approaches book publishing as one connected process, built around the book you actually wrote, not a package designed before we've read it.",
+    artifacts: ["Publishing Plan", "Production-Ready Files", "Publication & Distribution"],
+    outcomesTitle: "The craft behind book publishing.",
     outcomesDescription:
-      "The service combines specialist work without forcing every manuscript through the same package.",
+      "Every specialist should be working on the same book.",
     outcomes: [
       {
-        title: "Manuscript-led planning",
+        title: "Manuscript-Led Planning",
         description:
-          "Editorial depth, formats, design, production, and release needs selected after reviewing the work.",
+          "A polished novel, an illustrated memoir, and a complex business book shouldn't follow the exact same path. We begin with the manuscript to determine the appropriate editorial, creative, and production journey.",
       },
       {
-        title: "Coordinated specialists",
+        title: "One Creative Direction",
         description:
-          "Editors, designers, formatters, and publishing support work from the same agreed direction.",
+          "Editing affects layout. Cover design affects interior typography. Editors, designers, formatters, and production managers work from one agreed direction so the book feels like a single cohesive object.",
       },
       {
-        title: "Visible milestones",
+        title: "Author Approval",
         description:
-          "Approvals and dependencies are placed where they prevent rework and keep the author close to decisions.",
+          "Your book carries your name. Meaningful review points are built into the publishing process so you approve the manuscript, the design, and the final files before the next stage begins.",
       },
       {
-        title: "Release-ready records",
+        title: "Publication Readiness",
         description:
-          "Final files, metadata, format requirements, and platform handoffs checked before publication.",
+          "Ready to upload isn't the same as ready to publish. Before release, the book needs more than finished files. It needs accurate metadata, ISBN assignment, proper categorization, and distribution setup.",
       },
     ],
-    processTitle: "The book resolves one publishing decision at a time.",
+    processTitle: "Five decisions stand between manuscript and marketplace.",
     processDescription:
-      "A staged workflow gives each specialist a clear moment to contribute and every author a clear moment to approve.",
+      "Each stage answers a different question about the book. What does it need? How should it be shaped? How should it look and feel? Is every edition technically ready? And finally, how should it enter the world?",
     process: [
       {
-        label: "Brief",
-        title: "Consultation and manuscript review",
+        label: "Understand",
+        title: "Begin with what you've actually written.",
         description:
-          "We understand the work, reader, current stage, intended formats, timing priorities, and what publication should accomplish.",
+          "We review the manuscript, your goals, the intended audience, and the desired formats to determine the editorial scope and the appropriate publishing path.",
       },
       {
-        label: "Plan",
-        title: "Custom scope and publishing map",
+        label: "Refine",
+        title: "Settle the words before building around them.",
         description:
-          "Recommended editorial, design, production, and release stages are organized into named deliverables and review points.",
+          "If editorial work is needed, it happens first. Structural issues, voice refinement, and copy consistency are resolved before the manuscript enters design.",
       },
       {
-        label: "Make",
-        title: "Editorial and creative production",
+        label: "Design",
+        title: "Give the manuscript its physical identity.",
         description:
-          "The manuscript, cover, interior, and format-specific assets develop in sequence with author feedback at agreed milestones.",
+          "The book begins becoming something readers can recognize. Cover concepts and interior typography are developed, reviewed, and approved.",
       },
       {
-        label: "Proof",
-        title: "File preparation and quality assurance",
+        label: "Prepare",
+        title: "Build every edition for the way it will be read.",
         description:
-          "Text, layout, images, metadata, and technical specifications are checked against the editions and channels in scope.",
+          "Print and digital books don't simply use the same file. The approved design is formatted for print production and ebook distribution with quality-assurance checks.",
       },
       {
-        label: "Release",
-        title: "Publishing and distribution handoff",
+        label: "Publish",
+        title: "Give the finished book a proper entrance.",
         description:
-          "Approved files and records are prepared for account setup, platform submission, live-listing checks, or author handoff as agreed.",
+          "With the creative and production work approved, the files are prepared for release. Metadata is optimized, accounts are established, and the book moves into distribution.",
       },
     ],
     deliverables: [
-      "Manuscript and publishing assessment",
-      "Written scope and milestone schedule",
-      "Editorial deliverables included in scope",
-      "Cover and interior design files",
-      "Print and digital master files",
-      "Metadata and edition record",
-      "Quality-assurance checklist",
-      "Distribution or upload handoff",
+      "Manuscript & Publishing Assessment",
+      "Project Scope & Publishing Roadmap",
+      "Editorial Deliverables",
+      "Cover & Interior Design",
+      "Print & Digital Master Files",
+      "Book Metadata & Edition Details",
     ],
     bestFor: [
-      "First-time authors who want a guided path",
-      "Experienced authors coordinating multiple editions",
-      "Manuscripts that need several publishing disciplines",
+      "First-Time Authors",
+      "Experienced & Returning Authors",
+      "Multi-Stage Projects",
     ],
     faqs: [
       {
-        question: "Does every project include every publishing service?",
+        question: "Does every book need the complete publishing process?",
         answer:
-          "No. The manuscript review determines which stages are useful. A near-final book may need production and distribution support, while an early draft may benefit from editorial work before design begins.",
+          "No. A manuscript that's already professionally edited doesn't need to be edited again. A book with a finished cover only needs interior formatting. The initial review determines what the project actually requires.",
       },
       {
-        question: "How is the publishing timeline decided?",
+        question: "How long does the publishing process take?",
         answer:
-          "Timing depends on manuscript length and readiness, editorial depth, selected formats, illustration or design complexity, review rounds, author response times, and platform requirements.",
+          "A timeline is established after the manuscript review. It depends on the book's length, the depth of editorial work required, illustration needs, review periods, and platform requirements.",
       },
       {
-        question: "Will I approve the book before publication?",
+        question: "Who owns the rights to my book?",
         answer:
-          "Yes. Meaningful author approvals are placed at agreed milestones, including final proof or files before any authorised publication step.",
+          "You do. Scriptora provides professional publishing services without taking ownership of your intellectual property. Specific rights, distribution terms, and platform access are detailed in your project agreement.",
       },
       {
-        question: "Who owns the manuscript, files, and publishing accounts?",
+        question: "Will I have final say over the cover and the editing?",
         answer:
-          "Ownership, licences, source files, platform access, royalties, and usage rights are stated in the project agreement. The website does not substitute for those project-specific terms.",
+          "Yes. Professional publishing is a collaboration, not a surrender of control. The process includes dedicated approval stages for editing, design, and final files.",
       },
     ],
     related: [
@@ -406,109 +404,107 @@ export const serviceDetails = {
     slug: "ghostwriting-services",
     name: "Ghostwriting Services",
     code: "GW / 04",
-    eyebrow: "Collaborative manuscript development",
-    heroTitle: "Turn lived knowledge into a book that still sounds like you.",
-    highlight: "still sounds like you",
+    eyebrow: "GHOSTWRITING SERVICES",
+    heroTitle: "You don't need to be a writer to have a book worth writing.",
+    highlight: "book worth writing.",
     description:
-      "A confidential, structured writing partnership for transforming ideas, interviews, research, and experience into a coherent manuscript.",
+      "Some people arrive with twenty years of experience and no manuscript. Others have voice notes, half-written chapters, old journals, research folders, or a story they've told a hundred times but never managed to put on paper. That's enough to begin. Scriptora pairs your knowledge, memories, ideas, and perspective with the discipline of a professional book writer, shaping what you know into a manuscript that reads naturally, holds together beautifully, and still feels unmistakably yours.",
     introduction:
-      "Ghostwriting is not the removal of the author; it is a method for making authorship possible when time, structure, or writing capacity is the constraint. The work begins by learning how you think, speak, and want the reader to change.",
-    artifacts: ["Voice brief", "Chapter architecture", "Working manuscript"],
-    outcomesTitle: "A manuscript built from your authority and a writer’s discipline.",
+      "Good ghostwriting isn't about finding someone who can write for you. It's about finding someone who can listen closely enough to write with you. Your stories. Your arguments. Your memories. Your humor. Your expertise. Your way of explaining things when you're not trying too hard to sound like an author. We study those things before the manuscript takes shape. Then interviews, conversations, notes, recordings, research, and existing material are organized into a clear narrative or argument, without polishing away the person the book is supposed to represent. The craft is ours. The perspective remains yours.",
+    artifacts: ["Your Voice", "Your Ideas", "A Finished Manuscript"],
+    outcomesTitle: "The craft behind ghostwriting.",
     outcomesDescription:
-      "The collaboration captures source material, establishes a reliable structure, and keeps approval close to every major chapter decision.",
+      "Before we write like you, we learn how you sound.",
     outcomes: [
       {
-        title: "Voice before volume",
+        title: "Voice",
         description:
-          "Speech patterns, tone, point of view, vocabulary, and boundaries studied before full drafting accelerates.",
+          "Voice lives in more than vocabulary. It's in sentence length, pacing, rhythm, and how you naturally emphasize a point. We listen for those patterns before full drafting begins.",
       },
       {
-        title: "Research with a purpose",
+        title: "Structure",
         description:
-          "Interviews, notes, references, and evidence organized around the chapter’s job for the reader.",
+          "A lifetime of knowledge doesn't arrive in chapter order. We find the underlying thread holding your material together so the reader always knows why they are turning the page.",
       },
       {
-        title: "Visible manuscript structure",
+        title: "Research",
         description:
-          "A chapter architecture gives both author and writer a shared record of argument, narrative, and progression.",
+          "Memory gives us the story. Research gives it ground to stand on. We organize the available sources, notes, and documentation to build a complete narrative.",
       },
       {
-        title: "Collaborative revision",
+        title: "Collaboration",
         description:
-          "Drafts are reviewed in meaningful sections so course corrections happen before they become expensive rewrites.",
+          "Your involvement doesn't end when ours begins. Drafts are reviewed at meaningful stages so course corrections happen before they become expensive rewrites.",
       },
     ],
-    processTitle: "A writing partnership with a traceable source.",
+    processTitle: "Five stages between \"I've always wanted to write a book\" and actually having one.",
     processDescription:
-      "Each stage turns conversation and material into approved manuscript decisions.",
+      "You don't have to arrive knowing the chapters. You don't need a perfect outline.",
     process: [
       {
-        label: "Intent",
-        title: "Discovery and authorship brief",
+        label: "Listen",
+        title: "Find the book behind the idea.",
         description:
-          "We define the book’s purpose, reader, voice, scope, source material, sensitivities, credit, confidentiality, and approval process.",
+          "We begin with conversation. Why this book? Why now? Who is it for? And what material do we already have to work with?",
       },
       {
-        label: "Source",
-        title: "Interviews and research map",
+        label: "Architect",
+        title: "Give everything you know somewhere to belong.",
         description:
-          "Conversations, notes, documents, and research gaps are organized into a reliable source plan with clear responsibilities.",
+          "Now we turn the raw material into a book-shaped idea. A chapter architecture gives both of us a shared record of the narrative and progression.",
       },
       {
-        label: "Shape",
-        title: "Outline and sample chapter",
+        label: "Find the Voice",
+        title: "Make sure the manuscript sounds right before making it long.",
         description:
-          "The proposed structure and an early writing sample test the voice, depth, pacing, and working relationship before full drafting.",
+          "A sample chapter or representative section lets us test the voice on the page, calibrating the writing before full drafting accelerates.",
       },
       {
-        label: "Draft",
-        title: "Chapter production and review",
+        label: "Write",
+        title: "Turn conversations and source material into chapters worth reading.",
         description:
-          "The manuscript develops in agreed batches, with author notes, fact checks, and structural adjustments recorded throughout.",
+          "With the direction established, drafting begins in meaningful sections, with author notes and fact checks recorded throughout.",
       },
       {
-        label: "Resolve",
-        title: "Full-manuscript revision and handoff",
+        label: "Refine",
+        title: "Make the manuscript feel as though it always knew what it wanted to say.",
         description:
-          "The complete draft is reviewed for continuity, accuracy, voice, and purpose before editorial or production handoff.",
+          "Once the complete draft exists, we stop looking at individual chapters and review the entire manuscript for continuity, accuracy, and voice.",
       },
     ],
     deliverables: [
-      "Authorship, voice, and audience brief",
-      "Interview and source plan",
-      "Chapter-by-chapter outline",
-      "Sample chapter or voice test",
-      "Working chapter drafts",
-      "Revision and query record",
-      "Complete manuscript in agreed format",
-      "Editorial handoff notes",
+      "Authorship, Voice & Audience Brief",
+      "Interview & Source Plan",
+      "Chapter-by-Chapter Architecture",
+      "Voice Test / Sample Chapter",
+      "Working Chapter Drafts",
+      "Complete Revised Manuscript",
     ],
     bestFor: [
-      "Memoir and personal narrative",
-      "Business, thought leadership, and expertise-led books",
-      "Authors with strong material but limited writing time",
+      "Memoir & Personal Story",
+      "Business & Thought Leadership",
+      "Authors Short on Writing Time",
     ],
     faqs: [
       {
-        question: "Will the manuscript sound like me?",
+        question: "Will the manuscript actually sound like me?",
         answer:
-          "That is a central goal. Voice is studied through conversation, samples, vocabulary, cadence, and feedback. The outline and sample chapter create an early checkpoint before full drafting.",
+          "That's one of the central measures of successful ghostwriting. We study your natural vocabulary, cadence, perspective, humor, storytelling habits, existing writing, and feedback. A voice-development stage or sample chapter provides an early opportunity to calibrate the writing before full drafting progresses.",
       },
       {
-        question: "Who receives author credit?",
+        question: "If someone else writes it, am I still the author?",
         answer:
-          "Credit, confidentiality, copyright, acknowledgements, and any permitted portfolio use are agreed in writing. Arrangements can vary by project and should not be assumed from the website.",
+          "Ghostwriting arrangements are specifically designed around situations where a professional writer helps transform an author's ideas, expertise, experiences, and source material into a manuscript. However, credit, copyright, confidentiality, acknowledgements, permitted portfolio use, and other authorship matters should always be defined explicitly in your individual agreement rather than assumed.",
       },
       {
-        question: "How involved do I need to be?",
+        question: "How much of the book needs to come from me?",
         answer:
-          "The writer handles drafting, but your knowledge, decisions, source access, fact checks, and feedback remain essential. The schedule records the level and timing of author participation.",
+          "Enough to make it genuinely your book. That may include interviews, memories, expertise, arguments, documents, stories, research, existing writing, feedback, or factual review. The ghostwriter handles the writing process, but the substance and direction of the book depend on the nature of your project and the source material available.",
       },
       {
-        question: "Can you work from notes or recorded material?",
+        question: "What if I only have an idea?",
         answer:
-          "Yes. Existing notes, talks, articles, interviews, research, or recordings can inform the source map, provided you have the right to use and share them.",
+          "That's a valid starting point. An early-stage project may begin with discovery conversations designed to determine the book's central idea, reader, purpose, scope, potential structure, and what additional material would be needed before drafting.",
       },
     ],
     related: [
@@ -521,109 +517,107 @@ export const serviceDetails = {
     slug: "book-editing-and-proofreading-services",
     name: "Book Editing & Proofreading",
     code: "ED / 05",
-    eyebrow: "Editorial development and final polish",
-    heroTitle: "Strengthen every page without sanding away the voice.",
-    highlight: "without sanding away the voice",
+    eyebrow: "BOOK EDITING & PROOFREADING",
+    heroTitle: "Your voice is already there. Good editing knows where not to touch.",
+    highlight: "where not to touch.",
     description:
-      "Developmental editing, line editing, copyediting, and proofreading selected at the depth the manuscript actually needs.",
+      "A strong editor doesn't make every manuscript sound polished in the same way. They know when a chapter needs rebuilding, when a paragraph needs tightening, when one word is doing too much work, and when a sentence should be left exactly as the author wrote it. Scriptora provides developmental editing, line editing, copyediting, and proofreading at the depth your manuscript actually needs. The objective isn't to make the writing sound like us. It's to make it sound more completely like you.",
     introduction:
-      "Editing is not one universal pass. Structure, style, correctness, and final proofing solve different problems at different moments. Scriptora begins by diagnosing the manuscript so the author pays attention to the right layer first.",
-    artifacts: ["Editorial report", "Tracked manuscript", "Style record"],
-    outcomesTitle: "The right edit at the right depth.",
+      "Not every manuscript needs the same kind of editing. A novel with a weak middle doesn't need someone correcting commas first. A memoir with a strong structure but uneven prose doesn't need to be rebuilt from page one. And a beautifully edited manuscript entering the final layout doesn't need another developmental edit. It needs meticulous proof. The important question isn't simply: \"Does my book need editing?\" It's: \"What kind of editing does it need now?\" We begin there—identifying the level of editorial attention that will make the greatest difference before unnecessary work begins.",
+    artifacts: ["Editorial Assessment", "Tracked Manuscript", "Final Polish"],
+    outcomesTitle: "The craft behind book editing.",
     outcomesDescription:
-      "The editorial path separates big-picture decisions from sentence work and final production checks.",
+      "First, make sure the book works.",
     outcomes: [
       {
-        title: "Developmental clarity",
+        title: "Developmental Editing",
         description:
-          "Structure, pacing, argument, character, chapter logic, and reader progression examined as a whole.",
+          "Developmental editing looks beyond individual sentences to the architecture holding the manuscript together. For fiction, plot, pacing, character... For nonfiction, argument, chapter logic, reader progression.",
       },
       {
-        title: "Line-level intention",
+        title: "Line Editing",
         description:
-          "Rhythm, emphasis, tone, transitions, and sentence clarity refined while preserving authorship.",
+          "Line editing works where craft becomes voice. Sentence rhythm. Word choice. Repetition. Transitions. Clarity. The editor works closely with the prose to remove moments that keep the reader from experiencing it.",
       },
       {
-        title: "Copy consistency",
+        title: "Copyediting",
         description:
-          "Grammar, punctuation, usage, continuity, facts, and house-style decisions recorded and corrected.",
+          "Make consistency invisible. Names shouldn't change spelling halfway through. Capitalization, punctuation, dates, terminology shouldn't depend on which chapter the reader happens to be in.",
       },
       {
-        title: "Publication proof",
+        title: "Proofreading",
         description:
-          "Late-stage text and layout errors checked after the manuscript enters its designed form.",
+          "Catch what survived everything else. Proofreading is the last editorial defense before publication. Small errors. Very visible consequences.",
       },
     ],
-    processTitle: "A manuscript becomes clearer in deliberate passes.",
+    processTitle: "A manuscript becomes stronger in deliberate passes.",
     processDescription:
-      "Each pass has a defined purpose, deliverable, and point of author review.",
+      "Editing works best when the biggest questions are answered before the smallest ones.",
     process: [
       {
         label: "Diagnose",
-        title: "Sample review and editorial recommendation",
+        title: "Find out what the manuscript actually needs.",
         description:
-          "We assess the manuscript’s stage, genre, goals, visible issues, and dependencies before confirming the right editorial scope.",
+          "We begin by considering the manuscript's genre, intended reader, stage of development, previous editorial work, publishing plans, and visible strengths and weaknesses.",
       },
       {
-        label: "Structure",
-        title: "Developmental review",
+        label: "Develop",
+        title: "Solve the problems that affect the whole book.",
         description:
-          "Where included, the complete work is evaluated for architecture, pacing, narrative or argument flow, and reader experience.",
+          "When developmental editing is required, we step back from individual sentences and examine the manuscript as a complete reading experience.",
       },
       {
-        label: "Revise",
-        title: "Author revision and editorial dialogue",
+        label: "Refine",
+        title: "Work sentence by sentence without editing the author out of them.",
         description:
-          "Priority decisions are discussed and resolved before sentence-level editing begins, reducing contradictory or duplicated work.",
+          "Once the larger structure is stable, attention moves closer to the language. Changes and queries remain visible so editorial judgment becomes a conversation.",
       },
       {
-        label: "Language",
-        title: "Line and copy edit",
+        label: "Consistency",
+        title: "Make thousands of small decisions that agree with one another.",
         description:
-          "Tracked changes, comments, queries, and a style sheet address voice, clarity, correctness, consistency, and unresolved choices.",
+          "Copyediting brings precision across the manuscript. A style sheet helps preserve those decisions across hundreds of pages.",
       },
       {
         label: "Proof",
-        title: "Final proof and production handoff",
+        title: "Read the book readers are actually going to see.",
         description:
-          "The approved manuscript or designed proof is checked at the agreed stage, then handed forward with editorial records intact.",
+          "After the manuscript enters its designed form, proofreading becomes a different kind of reading. The manuscript isn't being reinvented. It's being protected.",
       },
     ],
     deliverables: [
-      "Editorial assessment and scope recommendation",
-      "Editorial report when included",
-      "Annotated or tracked-change manuscript",
-      "Author query list",
-      "Copyediting style sheet",
-      "Clean accepted manuscript",
-      "Proofreading correction record",
-      "Production handoff notes",
+      "Editorial Assessment & Scope Recommendation",
+      "Editorial Report",
+      "Tracked or Annotated Manuscript",
+      "Author Query Record",
+      "Editorial Style Sheet",
+      "Clean Accepted Manuscript",
     ],
     bestFor: [
-      "Early drafts needing structural direction",
-      "Complete manuscripts needing line and copy polish",
-      "Designed books requiring a final proof",
+      "Early or Revised Drafts",
+      "Complete Manuscripts",
+      "Designed Books & Final Proofs",
     ],
     faqs: [
       {
-        question: "Which type of editing does my manuscript need?",
+        question: "What's the difference between developmental editing, line editing, copyediting, and proofreading?",
         answer:
-          "A sample and project review helps determine whether the priority is structure, line-level craft, copy consistency, or final proofing. Several layers may be useful, but they should happen in the right order.",
+          "Developmental editing addresses the book at the structural level. Line editing focuses more closely on the prose itself. Copyediting addresses correctness and consistency. Proofreading is the final quality-control stage.",
       },
       {
-        question: "Will an editor change my voice?",
+        question: "Will an editor change my writing style?",
         answer:
-          "The aim is to clarify and strengthen the intended voice, not replace it. Material changes are visible through tracked edits, comments, queries, or an editorial report so the author can evaluate them.",
+          "A good editor shouldn't automatically make your writing resemble theirs. Editorial changes should improve the manuscript while respecting intentional voice, genre, audience, characterization, tone, and stylistic choices.",
       },
       {
-        question: "Should proofreading happen before formatting?",
+        question: "Do I need developmental editing if I've already revised the book several times?",
         answer:
-          "Copyediting is usually completed before layout. A final proof is most useful after formatting because it can catch text errors as well as page-level issues such as breaks, spacing, running heads, and captions.",
+          "Not necessarily. Multiple revisions don't automatically mean the structure is finished, but they don't automatically mean developmental editing is required either. The manuscript should be assessed based on its current condition.",
       },
       {
-        question: "Do you edit fiction and nonfiction?",
+        question: "Should proofreading happen before or after formatting?",
         answer:
-          "Yes. The brief and editor match should reflect the genre, audience, subject matter, and required editorial depth. Specialist or fact-sensitive projects may need additional review.",
+          "Final proofreading is generally most valuable after the book has been formatted. At that point, the proofreader can catch remaining textual mistakes as well as issues visible only in the designed pages.",
       },
     ],
     related: [

@@ -6,17 +6,13 @@ import Image from "next/image";
 
 import { getServiceVisuals } from "./service-visuals";
 
-export default function ServiceHero({
-  service,
-}: {
-  service: ServiceDetail;
-}) {
+export default function ServiceHero({ service }: { service: ServiceDetail }) {
   const visual = getServiceVisuals(service.slug).hero;
 
   return (
     <section
       aria-labelledby="service-hero-title"
-      className="relative overflow-hidden border-b border-neutral-300 bg-[#f5efe7] pb-12 pt-32 sm:pb-16 sm:pt-36 lg:pb-20 lg:pt-40"
+      className="relative overflow-hidden border-b border-neutral-300 bg-[#f5efe7] pb-12 pt-32 sm:pb-16 sm:pt-36 lg:pb-20 lg:pt-30"
     >
       <div
         aria-hidden="true"
@@ -61,9 +57,7 @@ export default function ServiceHero({
                   size="lg"
                   variant="outline"
                   tone="secondary"
-                  icon={
-                    <ArrowDownRight aria-hidden="true" strokeWidth={1.7} />
-                  }
+                  icon={<ArrowDownRight aria-hidden="true" strokeWidth={1.7} />}
                 >
                   Review the process
                 </Button>
