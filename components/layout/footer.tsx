@@ -7,6 +7,7 @@ import { cn } from "@/utils/cn";
 import { ArrowUp, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { ServiceClosing } from "@/content/services";
 
 const services = navigationLink.find(
   (item) => "dropdown" in item && item.dropdown,
@@ -69,13 +70,20 @@ const FooterLink = ({
   </Link>
 );
 
-const Footer = ({ homepage = false }: { homepage?: boolean }) => {
+const Footer = ({
+  homepage = false,
+  closing,
+}: {
+  homepage?: boolean;
+  closing?: ServiceClosing;
+}) => {
   const currentYear = new Date().getFullYear();
   const visibleExploreLinks = homepage ? homeFooter.explore : exploreLinks;
   const visibleServiceLinks = homepage ? homeFooter.services : serviceLinks;
-  const visibleContacts = homepage
-    ? footerContacts.filter((detail) => typeof detail.href === "string")
-    : footerContacts;
+  const visibleContacts =
+    homepage || closing
+      ? footerContacts.filter((detail) => typeof detail.href === "string")
+      : footerContacts;
 
   return (
     <footer
@@ -99,7 +107,7 @@ const Footer = ({ homepage = false }: { homepage?: boolean }) => {
               className="absolute inset-3 border border-white/8"
             />
             <div className="relative flex h-full flex-col">
-              {!homepage && (
+              {!homepage && !closing && (
                 <div className="flex items-center justify-between gap-6 border-b border-white/15 pb-4">
                   <p className="font-mono text-[9px] font-semibold uppercase tracking-[0.18em] text-primary-200">
                     Scriptora / Publishing colophon
@@ -125,16 +133,26 @@ const Footer = ({ homepage = false }: { homepage?: boolean }) => {
                 leading="tight"
                 tracking="editorial"
                 revealFrom="left"
+                reveal={closing ? false : undefined}
                 className="mt-12 max-w-4xl text-[clamp(2.5rem,5.7vw,5.5rem)]"
               >
-                {homepage
-                  ? homeBrandStatement.title
-                  : "Books are made in the details readers never have to notice."}
+                {closing
+                  ? closing.title
+                  : homepage
+                    ? homeBrandStatement.title
+                    : "Books are made in the details readers never have to notice."}
               </Title>
 
               <div className="mt-9 grid gap-8 border-t border-white/15 pt-6 sm:grid-cols-[1fr_auto] sm:items-end lg:mt-auto">
-                <p className="max-w-xl text-sm leading-6 text-white/60 sm:text-base sm:leading-7">
-                  {homepage ? (
+                <p
+                  className={cn(
+                    "max-w-xl whitespace-pre-line text-sm leading-6 sm:text-base sm:leading-7",
+                    closing ? "text-white/80" : "text-white/60",
+                  )}
+                >
+                  {closing ? (
+                    closing.description
+                  ) : homepage ? (
                     <>
                       {homeBrandStatement.description}{" "}
                       <span className="mt-3 block font-semibold text-white">
@@ -146,11 +164,16 @@ const Footer = ({ homepage = false }: { homepage?: boolean }) => {
                   )}
                 </p>
                 <Button
-                  href={homepage ? "/#contact" : "/#services"}
+                  href={
+                    closing?.href ?? (homepage ? "/#contact" : "/#services")
+                  }
                   size="lg"
                   className="w-full max-w-full sm:w-auto sm:min-w-48 [&_[data-slot=button-label]]:whitespace-normal"
                 >
-                  {homepage ? homeBrandStatement.action : "Review the services"}
+                  {closing?.action ??
+                    (homepage
+                      ? homeBrandStatement.action
+                      : "Review the services")}
                 </Button>
               </div>
             </div>

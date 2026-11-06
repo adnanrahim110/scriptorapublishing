@@ -3,6 +3,8 @@
 import { childrenPage } from "@/content/children";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import Copy from "@/components/ui/copy";
+import ChildrenHeading from "./children-heading";
 
 export default function ChildrenFaq() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -15,19 +17,10 @@ export default function ChildrenFaq() {
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-18 lg:items-start">
           <div className="lg:sticky lg:top-32">
-            <p className="text-[11px] font-bold uppercase tracking-[.17em] text-[#a95437]">
-              BEFORE THE FIRST PAGE
-            </p>
-            <h2
+            <ChildrenHeading
               id="children-faq-title"
-              className="mt-4 font-(family-name:--font-children) text-4xl font-semibold leading-[.98] tracking-[-.035em] text-[#25223d] sm:text-5xl"
-            >
-              Questions from the story desk.
-            </h2>
-            <p className="mt-6 max-w-md text-base leading-7 text-[#625969]">
-              Every children's book begins differently. These are some of the
-              questions authors ask us before their project takes shape.
-            </p>
+              {...childrenPage.faqSection}
+            />
           </div>
 
           <div className="border-t border-[#cfc1ae]">
@@ -43,7 +36,8 @@ export default function ChildrenFaq() {
                   <h3>
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left"
+                      id={`children-faq-button-${index}`}
+                      className="flex min-h-11 w-full items-center justify-between gap-6 py-6 text-left focus-visible:ring-2 focus-visible:ring-[#a95437]"
                       aria-expanded={isOpen}
                       aria-controls={contentId}
                       onClick={() => setOpenIndex(isOpen ? -1 : index)}
@@ -65,11 +59,14 @@ export default function ChildrenFaq() {
                   </h3>
                   <div
                     id={contentId}
+                    role="region"
+                    aria-labelledby={`children-faq-button-${index}`}
                     className={isOpen ? "pb-7 pr-14" : "hidden"}
                   >
-                    <p className="max-w-2xl text-sm leading-7 text-[#625969] sm:text-base">
-                      {faq.answer}
-                    </p>
+                    <Copy
+                      text={faq.answer}
+                      className="max-w-2xl text-sm leading-7 text-[#625969] sm:text-base"
+                    />
                   </div>
                 </article>
               );

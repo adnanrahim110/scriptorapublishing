@@ -3,7 +3,7 @@ import type { ServiceSlug } from "@/content/services";
 type ServiceImage = {
   src: string;
   alt: string;
-  position?: string;
+  positionClass?: string;
 };
 
 type ServiceVisualSet = {
@@ -39,7 +39,7 @@ const distribution = {
 const publishing = {
   src: "/imgs/hero-publishing-studio.png",
   alt: "An open handcrafted book and loose paper signatures in a warm publishing studio",
-  position: "50% 58%",
+  positionClass: "object-[50%_58%]",
 } as const;
 
 const bpHero = {

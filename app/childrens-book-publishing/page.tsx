@@ -5,6 +5,9 @@ import ChildrenHero from "@/components/children/children-hero";
 import ChildrenStudio from "@/components/children/children-studio";
 import ReaderPaths from "@/components/children/reader-paths";
 import StorybookJourney from "@/components/children/storybook-journey";
+import ChildrenIllustration from "@/components/children/children-illustration";
+import ChildrenNarrative from "@/components/children/children-narrative";
+import { childrenPage } from "@/content/children";
 import { childrenFont } from "@/app/fonts";
 import type { Metadata } from "next";
 
@@ -21,7 +24,20 @@ export default function ChildrensBookPublishingPage() {
       <ReaderPaths />
       <ChildrenStudio />
       <StorybookJourney />
+      <ChildrenIllustration />
       <ChildrenDeliverables />
+      <ChildrenNarrative
+        id="children-specialization-title"
+        content={childrenPage.specialization}
+        image="/imgs/children/painted-journey.webp"
+        imageAlt="An illustrated picture-book world with connected scenes and characters"
+      />
+      <ChildrenNarrative
+        id="children-collaboration-title"
+        content={childrenPage.collaboration}
+        image="/imgs/children/story-workshop.webp"
+        imageAlt="Storybook characters collaborating on pages in a treehouse studio"
+      />
       <ChildrenFaq />
       <ChildrenCta />
     </main>

@@ -8,6 +8,7 @@ type SectionHeadingProps = {
   description?: string;
   inverted?: boolean;
   className?: string;
+  reveal?: boolean;
 };
 
 const SectionHeading = ({
@@ -16,6 +17,7 @@ const SectionHeading = ({
   description,
   inverted = false,
   className,
+  reveal = true,
 }: SectionHeadingProps) => {
   return (
     <header
@@ -54,6 +56,7 @@ const SectionHeading = ({
 
       <div className="lg:col-span-10 lg:grid lg:grid-cols-10 lg:gap-8">
         <Title
+          reveal={reveal}
           as="h2"
           size="display"
           tone={inverted ? "inverse" : "ink"}

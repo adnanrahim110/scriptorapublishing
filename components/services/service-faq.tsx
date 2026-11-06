@@ -5,12 +5,9 @@ import type { ServiceDetail } from "@/content/services";
 import { cn } from "@/utils/cn";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
+import Copy from "@/components/ui/copy";
 
-export default function ServiceFaq({
-  service,
-}: {
-  service: ServiceDetail;
-}) {
+export default function ServiceFaq({ service }: { service: ServiceDetail }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -21,38 +18,34 @@ export default function ServiceFaq({
       <div className="container">
         <div id="service-faq-title">
           <SectionHeading
-            index="05"
-            eyebrow={`${service.name} / questions`}
-            title="Resolve the practical questions before the work begins."
-            description="These answers establish a useful starting point. The written project scope remains the record for deliverables, timing, rights, and responsibilities."
+            title={
+              service.faqSection?.title ??
+              "Resolve the practical questions before the work begins."
+            }
+            description={service.faqSection?.description}
+            reveal={false}
           />
         </div>
 
         <div className="mt-14 grid border-y border-neutral-300 lg:mt-20 lg:grid-cols-12">
           <aside className="border-b border-neutral-300 bg-primary-900 p-5 text-white sm:p-7 lg:col-span-4 lg:border-b-0 lg:border-r lg:p-8">
-            <div className="flex items-center justify-between gap-5 border-b border-white/15 pb-4">
-              <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-primary-200">
-                Question index / {String(service.faqs.length).padStart(2, "0")}
-              </p>
-              <span className="font-mono text-[8px] text-white/35">
-                Q—A
-              </span>
-            </div>
             <ol className="mt-5">
               {service.faqs.map((faq, index) => (
                 <li key={faq.question}>
                   <button
                     type="button"
+                    aria-controls={`${service.slug}-faq-answer-${index}`}
+                    aria-expanded={openIndex === index}
                     onClick={() => setOpenIndex(index)}
                     className={cn(
                       "group/faq-index grid w-full grid-cols-[28px_1fr] gap-3 border-b border-white/12 py-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-300/70",
-                      openIndex === index ? "text-white" : "text-white/50",
+                      openIndex === index ? "text-white" : "text-white/80",
                     )}
                   >
                     <span className="font-mono text-[8px] tracking-[0.14em] text-primary-300">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-xs font-semibold leading-5 transition-transform duration-300 group-hover/faq-index:translate-x-1">
+                    <span className="text-xs font-semibold leading-5">
                       {faq.question}
                     </span>
                   </button>
@@ -84,7 +77,7 @@ export default function ServiceFaq({
                       <span className="font-mono text-[9px] tracking-[0.16em] text-primary-500">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-heading text-xl font-medium leading-tight text-neutral-950 transition-transform duration-300 group-hover/faq:translate-x-1 sm:text-2xl">
+                      <span className="font-heading text-xl font-medium leading-tight text-neutral-950 sm:text-2xl">
                         {faq.question}
                       </span>
                       <span className="flex size-9 items-center justify-center border border-neutral-300 text-primary-700">
@@ -110,16 +103,17 @@ export default function ServiceFaq({
                     aria-labelledby={buttonId}
                     aria-hidden={!open}
                     className={cn(
-                      "grid transition-[grid-template-rows,opacity] duration-400 ease-[cubic-bezier(.22,1,.36,1)]",
+                      "grid",
                       open
                         ? "grid-rows-[1fr] opacity-100"
                         : "grid-rows-[0fr] opacity-0",
                     )}
                   >
                     <div className="overflow-hidden">
-                      <p className="ml-16 max-w-2xl border-l border-primary-500 px-5 pb-8 text-sm leading-7 text-neutral-600 sm:ml-24 sm:px-6 sm:text-base">
-                        {faq.answer}
-                      </p>
+                      <Copy
+                        text={faq.answer}
+                        className="ml-16 max-w-2xl border-l border-primary-500 px-5 pb-8 text-sm leading-7 text-neutral-600 sm:ml-24 sm:px-6 sm:text-base"
+                      />
                     </div>
                   </div>
                 </article>

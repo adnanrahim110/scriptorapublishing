@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "soft",
+      "prompt": "Use case: illustration-story. Create one original landscape 3:2 children's picture-book illustration demonstrating a soft and wonder-filled art direction: a small gentle rabbit resting beneath a willow tree by a moonlit pond, delicate watercolor paper textures, airy composition, muted mint, pale peach, buttery cream and twilight blue. Tender bedtime emotion, expressive subtle detail and quiet natural wonder. Elegant professionally painted children's book art. Full bleed flat illustration only, no physical book mockup, no text, letters, branding, borders, swatches or watermark.",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a08bac-6f03-7392-92b0-c991c822e78b\\exec-53d367e5-80f4-4f75-bab5-8b12ea32d7ba.png",
+      "path": "public/imgs/children/style-soft.webp"
+    },
+    {
+      "name": "bold",
+      "prompt": "Use case: illustration-story. Create one original landscape 3:2 children's picture-book illustration demonstrating a bold character-led art direction: a tiny nervous dragon with enormous expressive eyes and a bright striped scarf taking a comically determined leap over a puddle with little splashes. Clear confident shapes, dynamic but readable playful composition, contemporary gouache, rich coral, sunny yellow, teal and deep indigo, energetic humor and charming character personality. Full bleed flat illustration only, no physical book mockup, no text, letters, branding, borders, swatches or watermark.",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a08bac-6f03-7392-92b0-c991c822e78b\\exec-f5e7c8dc-27d3-47a3-8322-e4de9463c3aa.png",
+      "path": "public/imgs/children/style-bold.webp"
+    },
+    {
+      "name": "classic",
+      "prompt": "Use case: illustration-story. Create one original landscape 3:2 children's picture-book illustration demonstrating classic storybook art: a warmly lit woodland cottage under an old oak, a friendly fox with a little satchel greeting a rabbit at its round wooden door, abundant ferns and tiny believable environmental details. Traditional painterly gouache with tactile paper, rich moss green, amber, warm brown, cream, soft coral. Timeless warm treasured-book visual storytelling, beautifully composed, expressive characters. Full bleed flat illustration only, no physical book mockup, no text, letters, branding, borders, swatches or watermark.",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a08bac-6f03-7392-92b0-c991c822e78b\\exec-a33625ac-47e1-4fca-a2a1-376a0740d82d.png",
+      "path": "public/imgs/children/style-classic.webp"
+    },
+    {
+      "name": "magical",
+      "prompt": "Use case: illustration-story. Create one original landscape 3:2 children's picture-book illustration demonstrating magical adventure art: a curious young child and a friendly fox look across an enormous luminous fantasy valley from a mossy stone arch, distant floating islands, winding glowing river and a lantern-lit castle tucked into the cliffs. Cinematic atmospheric perspective and layered painterly detail, indigo, teal, lavender, warm gold and restrained coral. Inviting safe wonder and discovery appropriate for young readers, purposeful readable composition. Full bleed flat illustration only, no physical book mockup, no text, letters, branding, borders, swatches or watermark.",
+      "sourcePath": "C:\\Users\\hp\\.codex\\generated_images\\01a08bac-6f03-7392-92b0-c991c822e78b\\exec-c83d4fd4-c5ba-431c-8905-bc2530615ffd.png",
+      "path": "public/imgs/children/style-magical.webp"
+    }
+  ]
+}

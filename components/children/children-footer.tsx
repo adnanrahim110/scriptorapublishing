@@ -5,6 +5,9 @@ import { legalLinks } from "@/content/legal";
 import { ArrowUp, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { childrenPage } from "@/content/children";
+import Copy from "@/components/ui/copy";
+import { cn } from "@/utils/cn";
 
 const footerLinks = navigationLink.filter(
   (item) => "href" in item && item.href,
@@ -26,13 +29,10 @@ function PlayfulFooterLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="group flex items-center justify-between gap-5 border-b border-white/14 py-3.5 text-sm font-semibold text-white/68 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd85a]"
+      className="group flex min-h-11 items-center justify-between gap-5 border-b border-white/20 py-4 text-sm font-semibold text-white/80 hover:text-white focus-visible:ring-2 focus-visible:ring-[#ffd85a]"
     >
       {label}
-      <span
-        aria-hidden="true"
-        className="size-2 rounded-full bg-[#ff715f] transition-transform duration-300 group-hover:scale-150"
-      />
+      <span aria-hidden="true" className="size-2 rounded-full bg-[#ff715f]" />
     </Link>
   );
 }
@@ -43,7 +43,10 @@ export default function ChildrenFooter() {
   return (
     <footer
       aria-labelledby="children-footer-title"
-      className={`${childrenFont.variable} overflow-hidden bg-[#25223d] text-white`}
+      className={cn(
+        childrenFont.variable,
+        "overflow-hidden bg-[#25223d] text-white",
+      )}
     >
       <div className="container pt-10 pb-2 sm:pt-14 lg:pt-18">
         <section className="relative overflow-hidden rounded-4xl bg-[#ff715f] p-7 text-[#25223d] sm:p-10 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-12 lg:p-12">
@@ -56,30 +59,24 @@ export default function ChildrenFooter() {
             className="absolute -bottom-16 left-[42%] size-36 rounded-full bg-[#35b8ad]/70"
           />
           <div className="relative">
-            <p className="text-[10px] font-bold uppercase tracking-[.17em]">
-              THE END OF THIS PAGE. THE BEGINNING OF SOMETHING ELSE.
-            </p>
             <h2
               id="children-footer-title"
               className="mt-4 max-w-3xl font-(family-name:--font-children) text-3xl font-semibold leading-none tracking-[-.035em] text-[#25223d] sm:text-4xl lg:text-5xl"
             >
-              Someday, this could be someone's favorite book.
+              {childrenPage.closing.title}
             </h2>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-[#25223d]/80">
-              That's the beautiful thing about children's stories. You never
-              quite know where they'll travel. Into a classroom, onto a library
-              shelf, or into the imagination of one child who asks:{" "}
-              <strong>"Can we read it again?"</strong> Let's make a book worthy
-              of the answer.
-            </p>
+            <Copy
+              text={childrenPage.closing.description}
+              className="mt-4 max-w-xl text-sm leading-6 text-[#25223d]"
+            />
           </div>
           <div className="relative mt-8 lg:mt-0">
             <Button
               href="/contact-us"
               size="lg"
-              className="border-[#25223d] bg-[#25223d] text-white"
+              className="max-w-full border-[#25223d] bg-[#25223d] text-white [&_[data-slot=button-label]]:whitespace-normal"
             >
-              Begin Your Children's Book
+              {childrenPage.closing.action}
             </Button>
           </div>
         </section>
@@ -93,7 +90,7 @@ export default function ChildrenFooter() {
               height={88}
               className="h-auto w-44 brightness-0 invert sm:w-48"
             />
-            <p className="mt-6 max-w-sm text-sm leading-7 text-white/58">
+            <p className="mt-6 max-w-sm text-sm leading-7 text-white/80">
               Story shaping, illustration direction, and publishing craft for
               picture books, early readers, and illustrated adventures.
             </p>
@@ -149,7 +146,7 @@ export default function ChildrenFooter() {
         </div>
 
         <div className="flex flex-col gap-5 py-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[10px] font-semibold text-white/38">
+          <p className="text-[10px] font-semibold text-white/80">
             © {currentYear} {brand.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
@@ -157,7 +154,7 @@ export default function ChildrenFooter() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[10px] font-semibold text-white/48 transition-colors hover:text-white"
+                className="inline-flex min-h-11 items-center text-[10px] font-semibold text-white/80 hover:text-white focus-visible:ring-2 focus-visible:ring-[#ffd85a]"
               >
                 {link.label}
               </Link>

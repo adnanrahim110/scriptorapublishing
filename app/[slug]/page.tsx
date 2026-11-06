@@ -5,11 +5,8 @@ import ServiceHero from "@/components/services/service-hero";
 import ServiceOutcomes from "@/components/services/service-outcomes";
 import ServiceProcess from "@/components/services/service-process";
 import ServiceRelated from "@/components/services/service-related";
-import {
-  getServiceDetail,
-  serviceDetails,
-  type ServiceSlug,
-} from "@/content/services";
+import ServiceNarrative from "@/components/services/service-narrative";
+import { getServiceDetail, serviceDetails } from "@/content/services";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -39,22 +36,38 @@ export async function generateMetadata({
 
   return {
     title: `${service.name} | Scriptora Publishing`,
-    description: service.description,
+    description:
+      service.metaDescription ?? service.description.replace(/\s+/g, " "),
   };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
-  const service = getServiceDetail(slug as ServiceSlug);
+  const service = getServiceDetail(slug);
 
   if (!service) notFound();
 
   return (
     <main>
       <ServiceHero service={service} />
+      {service.introductionTitle && (
+        <ServiceNarrative
+          id="service-introduction-title"
+          copy={{
+            title: service.introductionTitle,
+            description: service.introduction,
+          }}
+        />
+      )}
       <ServiceOutcomes service={service} />
       <ServiceProcess service={service} />
       <ServiceDeliverables service={service} />
+      {service.authority && (
+        <ServiceNarrative
+          id="service-authority-title"
+          copy={service.authority}
+        />
+      )}
       <ServiceFaq service={service} />
       <ServiceRelated service={service} />
       <ServiceCta service={service} />
